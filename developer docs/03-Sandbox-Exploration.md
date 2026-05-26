@@ -161,11 +161,11 @@ Before importing:
 
 ```mermaid
 flowchart TB
-    R1[POST /authorization/v1/oauth-detail/v2] --> R2[POST /authorization/v3/authenticate]
-    R2 --> R3[POST /authorization/v3/auth-code]
-    R3 --> R4[POST /oauth/v2/token<br/>(private_key_jwt)]
-    R4 --> R5[POST /credential<br/>Authorization: Bearer + jwt proof]
-    R5 --> R6{200 OK — signed VC}
+    R1["POST /authorization/v1/oauth-detail/v2"] --> R2["POST /authorization/v3/authenticate"]
+    R2 --> R3["POST /authorization/v3/auth-code"]
+    R3 --> R4["POST /oauth/v2/token<br/>(private_key_jwt)"]
+    R4 --> R5["POST /credential<br/>Authorization: Bearer + jwt proof"]
+    R5 --> R6{"200 OK — signed VC"}
 
     classDef authStep fill:#2563EB,stroke:#1E3A8A,stroke-width:2px,color:#FFFFFF
     classDef tokenStep fill:#7C3AED,stroke:#4C1D95,stroke-width:2px,color:#FFFFFF
