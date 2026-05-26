@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="15.977" height="19.972" viewBox="0 0 15.977 19.972">
+  <!-- Shield background - Green for Valid -->
+  <path d="M15.989,23.922a9.8,9.8,0,0,1-5.742-4.057A11.84,11.84,0,0,1,8,12.887V6.946l7.989-3,7.989,3v5.942a11.84,11.84,0,0,1-2.247,6.978A9.8,9.8,0,0,1,15.989,23.922Z" transform="translate(-8 -3.95)" fill="#2AA54B"/>
+  <!-- White checkmark centered -->
+  <polyline points="4.5,10 6.75,12.25 11.5,7.5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

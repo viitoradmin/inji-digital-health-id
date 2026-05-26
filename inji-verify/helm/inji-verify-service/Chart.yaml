@@ -1,0 +1,20 @@
+apiVersion: v2
+name: inji-verify-service
+description: A Helm chart for Inji's verify service module
+type: application
+version: 0.0.1-develop
+appVersion: ""
+dependencies:
+  - name: common
+    repository: https://charts.bitnami.com/bitnami
+    tags:
+      - bitnami-common
+    version: 1.x.x
+home: https://inji.io
+keywords:
+  - mosip
+  - inji
+  - inji-verify-service
+maintainers:
+  - email: info@mosip.io
+    name: INJI

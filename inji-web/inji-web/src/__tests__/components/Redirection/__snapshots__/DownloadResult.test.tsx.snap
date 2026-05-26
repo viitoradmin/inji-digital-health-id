@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing of DownloadResult ->  matches snapshot when user is logged in 1`] = `
+<DocumentFragment>
+  <div
+    class="bg-white rounded-lg shadow-iw flex flex-col flex-grow h-fit items-center justify-center"
+    data-testid="download-result-container"
+  >
+    <div
+      data-testid="mock-landing-page-wrapper"
+      icon="[object Object]"
+      subtitle="SubTitle"
+      title="Title"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Testing of DownloadResult ->  matches snapshot when user is not logged in 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="mock-landing-page-wrapper"
+    icon="[object Object]"
+    subtitle="SubTitle"
+    title="Title"
+  />
+</DocumentFragment>
+`;

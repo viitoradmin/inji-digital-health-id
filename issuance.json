@@ -1,0 +1,32 @@
+{
+    "credential": {
+        "issuanceDate": "2026-05-18T06:39:40.001Z",
+        "credentialSubject": {
+            "firstName": "Shailesh",
+            "lastName": "Gojiya",
+            "phoneNumber": "+919876543210",
+            "gender": "Female",
+            "dateOfBirth": "1815-12-10",
+            "id": "did:jwk:eyJrdHkiOiJSU0EiLCJlIjoiQVFBQiIsInVzZSI6InNpZyIsImtpZCI6InBhY05aMGdwaFFwRHF6N1hvdEdqX2N2bXpnYVV6ZXRURExxa1Zpa21CUGciLCJhbGciOiJSUzI1NiIsIm4iOiI4NXNIa0xZM2xockc2U0FXcVpJREVSVmVQY3pDaG5id0cySzFDeEdHeHhRbUdZcmVJNWJyZUNNTktpeEtTc0FwOXVGSWdrVVk5czB3a0duLWVrcTFoU0NRblI5WmZhZzRDSUlPamhvZk85SWRUUVVneUgydWpOMXVidUhQNnVPU0MybFVwUFgwajBLaTdjWmpSMENSS3A4SmJBVS1Kc2VoSVFaRG5NMk1KWHFLekFYR2FTWW5SS0RPWFB1Mno0enlnUWxBVDlGWjc1QkNEZmhQektVdlFENUFYRlB3WHluOHhRU01OLTdqMDVYYnRzVTViMFJhTU1vWHBIUm5MbHNTdW8zSDFfMHcyRWZ0T2JJU1ZWUUVrZ1FQZUpXRENOMk1pWFZjMjVYMlptcGdmeFVJNEZMZG1PNDRjdklncXNWQWh3dklSaVVEdDJOZC0wS0FrN3FySXcifQ==",
+            "email": "shailesh.gojiya@viitor.cloud"
+        },
+        "id": "https://mosip.io/credential/84cf150d-37d7-4a56-a92c-4046e40d7252",
+        "type": [
+            "VerifiableCredential",
+            "HealthID"
+        ],
+        "@context": [
+            "https://www.w3.org/2018/credentials/v1",
+            "https://piyush7034.github.io/my-files/farmer.json"
+        ],
+        "issuer": "did:web:certify-nginx",
+        "expirationDate": "2028-05-17T06:39:40.001Z",
+        "proof": {
+            "type": "Ed25519Signature2020",
+            "created": "2026-05-18T06:39:40Z",
+            "proofPurpose": "assertionMethod",
+            "verificationMethod": "did:web:certify-nginx#RMDzr0ja2bSvNpouEM5brhpg4OnJYkDFDA_Xdcd4R3M",
+            "proofValue": "z2BZeBCWLWocEptvHpyoHZYPxScFwtx7wEbyX2upix3LdHGuyq9zdXnY5MwCThuJ11qQYMYnVent2juRZMWn8tPEv"
+        }
+    }
+}

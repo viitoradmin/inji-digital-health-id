@@ -1,0 +1,31 @@
+{
+  "issuers": [
+    {
+      "credential_issuer": "LocalPerson",
+      "issuer_id": "LocalPerson",
+      "protocol": "OpenId4VCI",
+      "display": [
+        {
+          "name": "Local Person Issuer",
+          "logo": {
+            "url": "https://mosip.github.io/inji-config/logos/agro-vertias-logo.png",
+            "alt_text": "local-person"
+          },
+          "title": "Local Person Credentials",
+          "description": "Download credentials from local Inji Certify (Postgres-backed)",
+          "language": "en"
+        }
+      ],
+      "client_id": "wallet-demo",
+      "redirect_uri": "io.mosip.residentapp.inji://oauthredirect",
+      "token_endpoint": "http://localhost:8099/v1/mimoto/get-token/LocalPerson",
+      "authorization_audience": "http://localhost:8090/v1/certify/issuance/credential",
+      "proxy_token_endpoint": "http://certify:8090/v1/certify/oauth/token",
+      "client_alias": "wallet-demo-client",
+      "qr_code_type": "EmbeddedVC",
+      "credential_issuer_host": "http://certify-nginx",
+      "enabled": "true",
+      "wellknown_endpoint": "http://certify-nginx/.well-known/openid-credential-issuer"
+    }
+  ]
+}

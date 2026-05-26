@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none" role="img" aria-label="Inji Certify">
+  <defs>
+    <linearGradient id="certify-mark-gradient" x1="8" y1="4" x2="34" y2="36" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5B4FD9"/>
+      <stop offset="0.5" stop-color="#4F46E5"/>
+      <stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+  </defs>
+  <circle cx="20" cy="20" r="20" fill="url(#certify-mark-gradient)"/>
+  <path
+    d="M20 11.5 26.5 14.5V20.2C26.5 24.1 23.6 27.6 20 28.8 16.4 27.6 13.5 24.1 13.5 20.2V14.5L20 11.5Z"
+    stroke="white"
+    stroke-width="1.6"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M17.2 20.1 19.1 22.2 23.1 17.8"
+    stroke="white"
+    stroke-width="1.6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

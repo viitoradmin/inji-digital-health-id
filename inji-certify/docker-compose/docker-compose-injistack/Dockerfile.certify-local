@@ -1,0 +1,22 @@
+# Patched certify-service JAR on top of upstream plugins image (includes pre-auth subject-claim support for Postgres plugin).
+# Build context: inji-certify repository root (see docker-compose.yaml build.context).
+
+# syntax=docker/dockerfile:1
+#
+# First build can take 10–20+ minutes: Maven downloads the dependency graph and compiles.
+# It is NOT stuck: we avoid `mvn -q` so you see download/compile progress.
+# Rebuilds are faster with BuildKit cache for ~/.m2 (DOCKER_BUILDKIT=1 is default on recent Docker).
+
+FROM maven:3.9.9-eclipse-temurin-21 AS build
+WORKDIR /src
+COPY . .
+ARG CERTIFY_VERSION=0.14.0
+RUN --mount=type=cache,target=/root/.m2 \
+    mvn -B -pl certify-service -am package -DskipTests -Dgpg.skip=true \
+    && cp "/src/certify-service/target/certify-service-${CERTIFY_VERSION}.jar" /tmp/certify-service.jar
+
+FROM injistack/inji-certify-with-plugins:0.14.0
+USER root
+COPY --from=build /tmp/certify-service.jar /home/inji/certify-service.jar
+RUN chown inji:inji /home/inji/certify-service.jar
+USER inji

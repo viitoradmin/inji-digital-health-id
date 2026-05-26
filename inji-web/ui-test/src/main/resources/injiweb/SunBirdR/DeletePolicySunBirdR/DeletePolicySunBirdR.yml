@@ -1,0 +1,34 @@
+DeletePolicySunBirdR:
+   InjiWeb_SunBirdR_DeletePolicy_NOAUTH_Valid_Smoke_POLICY1:
+      endPoint: $SUNBIRDBASEURL$/api/v1/Insurance/{insuranceid}
+      description: Deleting Sunbird policy with valid parameters
+      uniqueIdentifier: TC_Mimoto_DeletePolicySunBirdR_01
+      role: resident
+      restMethod: delete
+      checkErrorsOnlyInResponse: true
+      validityCheckRequired: true
+      inputTemplate: injiweb/SunBirdR/DeletePolicySunBirdR/DeletePolicySunBirdR
+      outputTemplate: injiweb/SunBirdR/DeletePolicySunBirdR/DeletePolicySunBirdRResult
+      input: '{
+        "insuranceid": "$ID:SunBirdR_CreatePolicy_NOAUTH_Valid_Smoke_POLICY1_Sid_osid$"
+    }'
+      output: '{
+	"status": "SUCCESSFUL"
+}'
+
+   InjiWeb_SunBirdR_DeletePolicy_NOAUTH_Valid_Smoke_POLICY2:
+      endPoint: $SUNBIRDBASEURL$/api/v1/Insurance/{insuranceid}
+      description: Deleting Sunbird policy with valid parameters
+      uniqueIdentifier: TC_Mimoto_DeletePolicySunBirdR_01
+      role: resident
+      restMethod: delete
+      checkErrorsOnlyInResponse: true
+      validityCheckRequired: true
+      inputTemplate: injiweb/SunBirdR/DeletePolicySunBirdR/DeletePolicySunBirdR
+      outputTemplate: injiweb/SunBirdR/DeletePolicySunBirdR/DeletePolicySunBirdRResult
+      input: '{
+        "insuranceid": "$ID:SunBirdR_CreatePolicy_NOAUTH_Valid_Smoke_POLICY2_Sid_osid$"
+    }'
+      output: '{
+	"status": "SUCCESSFUL"
+}'

@@ -1,0 +1,265 @@
+package com.example.samplecredentialwallet.ui.auth
+
+import android.annotation.SuppressLint
+import android.graphics.Bitmap
+import android.net.Uri
+import android.util.Log
+import android.webkit.WebResourceRequest
+import android.webkit.WebView
+import android.webkit.WebViewClient
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.viewinterop.AndroidView
+import androidx.navigation.NavController
+import com.example.samplecredentialwallet.utils.AuthCodeHolder
+
+@SuppressLint("SetJavaScriptEnabled")
+@Composable
+fun AuthWebViewScreen(
+    authorizationUrl: String,
+    redirectUri: String,
+    navController: NavController
+) {
+    var isLoading by remember { mutableStateOf(true) }
+    var isDownloading by remember { mutableStateOf(false) }
+    var currentUrl by remember { mutableStateOf("") }
+    var errorMessage by remember { mutableStateOf<String?>(null) }
+
+    Box(
+        modifier = Modifier.fillMaxSize()
+    ) {
+        Column(
+            modifier = Modifier.fillMaxSize()
+        ) {
+            // Header with loading indicator
+            if (isLoading) {
+                LinearProgressIndicator(
+                    modifier = Modifier.fillMaxWidth(),
+                    color = androidx.compose.ui.graphics.Color(0xFFF2680C)
+                )
+            }
+
+            Text(
+                text = "Authenticating...",
+                style = MaterialTheme.typography.bodySmall,
+                modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
+                maxLines = 1
+            )
+
+        // WebView
+        AndroidView(
+            factory = { context ->
+                WebView(context).apply {
+                    settings.javaScriptEnabled = true
+                    settings.domStorageEnabled = true
+                    settings.loadWithOverviewMode = true
+                    settings.useWideViewPort = true
+
+                    webViewClient = object : WebViewClient() {
+                        override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
+                            super.onPageStarted(view, url, favicon)
+                            Log.d("AuthWebView", "Page started: $url")
+                            currentUrl = url ?: ""
+                            isLoading = true
+                        }
+
+                        override fun onPageFinished(view: WebView?, url: String?) {
+                            super.onPageFinished(view, url)
+                            Log.d("AuthWebView", "Page finished: $url")
+                            isLoading = false
+                        }
+
+                        override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
+                            return handleRedirect(request?.url?.toString())
+                        }
+
+                        @Deprecated("Deprecated in Java")
+                        override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
+                            return handleRedirect(url)
+                        }
+
+                        override fun onReceivedError(
+                            view: WebView?,
+                            errorCode: Int,
+                            description: String?,
+                            failingUrl: String?
+                        ) {
+                            super.onReceivedError(view, errorCode, description, failingUrl)
+                            Log.e("AuthWebView", "WebView error: $errorCode - $description for $failingUrl")
+                            isLoading = false
+                            isDownloading = false
+                            errorMessage = "Failed to load page: ${description ?: "Unknown error"}"
+                        }
+
+                        private fun handleRedirect(url: String?): Boolean {
+                            Log.d("AuthWebView", "shouldOverrideUrlLoading: $url")
+
+                            if (url == null || redirectUri.isBlank()) {
+                                return false
+                            }
+
+                            val expected = try {
+                                Uri.parse(redirectUri)
+                            } catch (e: Exception) {
+                                Log.e("AuthWebView", "Invalid configured redirectUri: $redirectUri", e)
+                                return false
+                            }
+
+                            val actual = try {
+                                Uri.parse(url)
+                            } catch (e: Exception) {
+                                Log.e("AuthWebView", "Invalid redirect url: $url", e)
+                                return false
+                            }
+
+                            val expectedPath = expected.path ?: ""
+                            val actualPath = actual.path ?: ""
+                            val isExpectedRedirect =
+                                expected.scheme == actual.scheme &&
+                                expected.authority == actual.authority &&
+                                expectedPath == actualPath
+
+                            if (!isExpectedRedirect) {
+                                return false
+                            }
+
+                            Log.d("AuthWebView", "Redirect URI matched: $url")
+
+                            val queryParams = mutableMapOf<String, String>()
+                            actual.queryParameterNames.forEach { name ->
+                                queryParams[name] = actual.getQueryParameter(name) ?: ""
+                            }
+                            val code = actual.getQueryParameter("code")
+                            val error = actual.getQueryParameter("error")
+
+                            Log.d("AuthWebView", "Auth redirect params: codePresent=${code != null}, error=$error, keys=${queryParams.keys}")
+
+                            if (code != null) {
+                                AuthCodeHolder.completeV2(queryParams)
+                                AuthCodeHolder.complete(code)
+                                isLoading = false
+                                isDownloading = true
+                                errorMessage = null
+                            } else if (error != null) {
+                                Log.e("AuthWebView", "Auth error: $error")
+                                isLoading = false
+                                isDownloading = false
+                                errorMessage = "Authentication failed: $error"
+                                AuthCodeHolder.completeV2(null)
+                                AuthCodeHolder.complete(null)
+                            } else {
+                                Log.w("AuthWebView", "No code or error in redirect")
+                                isLoading = false
+                                isDownloading = false
+                                errorMessage = "Authentication failed: No authorization code received"
+                                AuthCodeHolder.completeV2(null)
+                                AuthCodeHolder.complete(null)
+                            }
+
+                            // Keep current screen while background download continues.
+                            return true
+                        }
+                    }
+
+                    Log.d("AuthWebView", "Loading authorization URL: $authorizationUrl")
+                    loadUrl(authorizationUrl)
+                }
+            },
+            modifier = Modifier.fillMaxSize()
+        )
+        }
+
+        // Loading overlay when page is loading or downloading
+        if (isLoading || isDownloading) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(Color.White.copy(alpha = 0.95f)),
+                contentAlignment = Alignment.Center
+            ) {
+                Card(
+                    colors = CardDefaults.cardColors(
+                        containerColor = Color.White
+                    ),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
+                ) {
+                    Column(
+                        modifier = Modifier.padding(32.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(56.dp),
+                            color = Color(0xFFF2680C)
+                        )
+                        Spacer(modifier = Modifier.height(16.dp))
+                        Text(
+                            text = if (isDownloading) "Downloading Credential..." else "Loading Authentication...",
+                            style = MaterialTheme.typography.titleMedium,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Text(
+                            text = "Please wait...",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = Color.Gray
+                        )
+                    }
+                }
+            }
+        }
+
+        // Error overlay when there's an error
+        errorMessage?.let { message ->
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(Color.White.copy(alpha = 0.95f)),
+                contentAlignment = Alignment.Center
+            ) {
+                Card(
+                    colors = CardDefaults.cardColors(
+                        containerColor = Color.White
+                    ),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
+                ) {
+                    Column(
+                        modifier = Modifier.padding(32.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        Text(
+                            text = "Error",
+                            style = MaterialTheme.typography.titleLarge,
+                            fontWeight = FontWeight.Bold,
+                            color = Color.Red
+                        )
+                        Spacer(modifier = Modifier.height(16.dp))
+                        Text(
+                            text = message,
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = Color.Gray
+                        )
+                        Spacer(modifier = Modifier.height(24.dp))
+                        Button(
+                            onClick = {
+                                errorMessage = null
+                                navController.popBackStack()
+                            },
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = Color(0xFFF2680C)
+                            )
+                        ) {
+                            Text("Go Back")
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

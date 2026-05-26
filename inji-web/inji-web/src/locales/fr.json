@@ -1,0 +1,565 @@
+{
+  "PageTemplate": {
+    "Header": {
+      "home": "Maison",
+      "faq": "FAQ",
+      "login": "Se connecter",
+      "logout": "Déconnexion"
+    },
+    "Footer": {
+      "product": "Un produit MOSIP",
+      "copyRight": "© 2024 MOSIP. Tous droits réservés."
+    }
+  },
+  "HomePage": {
+    "Banner": {
+      "heading": "Accédez et gérez facilement vos identifiants numériques",
+      "description": "Rendez vos données portables en toute confiance. Gérez en toute sécurité vos documents numériques avec notre portefeuille web facile à utiliser.",
+      "buttontext": "Commencer"
+    },
+    "Features": {
+      "heading": "Caractéristiques de Inji Wallet",
+      "description1": "Gestion transparente et sécurisée des identifiants vérifiables",
+      "description2": "pour des interactions numériques de confiance."
+    },
+    "FeatureItem1": {
+      "heading": "Accédez à vos identifiants, où que vous soyez",
+      "item1": "Informations d'identification simplifiées",
+      "description1": "Gardez tous vos documents essentiels",
+      "item2": "Plus de paperasse, tout au même endroit",
+      "description2": "Téléchargez, stockez et récupérez facilement vos documents. Gagnant, gagnant, gagnant."
+    },
+    "FeatureItem2": {
+      "heading": "Vos documents téléchargés en une seconde",
+      "item1": "Téléchargez en toute confiance",
+      "description1": "Enregistrez instantanément vos documents importants",
+      "item2": "Sain et sauf",
+      "description2": "Téléchargez des pièces d'identité, des licences et plus encore, en un seul endroit sécurisé."
+    },
+    "FeatureItem3": {
+      "heading": "Partage facile",
+      "item1": "Partager avec un code QR",
+      "description1": "Partagez facilement vos pièces d'identité et certificats en déplacement. Présentez simplement le code QR de votre document, à scanner et partager.",
+      "item2": "Lire, définir, partager",
+      "description2": "Code QR vérifié en temps réel."
+    },
+    "FeatureItem4": {
+      "heading": "Sécurisé et privé",
+      "item1": "Vos identifiants, protégés",
+      "description1": "Vos données restent privées, grâce au mécanisme de sécurité intégré.",
+      "item2": "Soyez tranquille",
+      "description2": "Gardez vos identifiants en sécurité, pour que vous puissiez vous concentrer sur l'essentiel."
+    },
+    "FeatureItem5": {
+      "heading": "Accès et compatibilité étendus",
+      "item1": "Disponible sur votre navigateur préféré",
+      "description1": "Inji Wallet fonctionne avec Chrome, Safari, Firefox et Edge.",
+      "item2": "Toujours à portée de main",
+      "description2": "La commodité rencontre l'accessibilité où que vous soyez, garantissant que vos documents sont toujours à portée de main."
+    },
+    "QuickTip": {
+      "heading": "Conseils rapides pour télécharger instantanément vos identifiants",
+      "toastText": "à venir",
+      "buttontext": "Apprendre encore plus"
+    },
+    "Login": {
+      "loginTitle": "Se connecter",
+      "loginDescription": "Connectez-vous avec votre compte ou continuez en tant qu'invité pour accéder à vos identifiants.",
+      "loginNote": "Certaines fonctionnalités peuvent être limitées en mode invité.",
+      "loginDescriptionOVP": "Continue to share credentials.",
+      "loginNoteOVP": "Log in to share your credentials with the service you're trying to access.",
+      "loggingIn": "Connexion en cours",
+      "loginGoogle": "Continuer avec Google",
+      "loginGuest": "Continuer en tant qu'invité"
+    },
+    "LoginFailedModal": {
+      "failureMessage": "Échec de la connexion",
+      "failureDescription": "Votre tentative de connexion a échoué. Veuillez vérifier vos identifiants et réessayer",
+      "retry": "Réessayer"
+    }
+  },
+  "Layout": {
+    "VCDownload": {
+      "success": "Votre {{cardType}} a été téléchargé avec succès.",
+      "error": "Oups ! Un problème est survenu. Votre {{cardType}} n'a pas pu être téléchargée. Veuillez resélectionner l'émetteur et réessayer."
+    }
+  },
+  "PasscodePage": {
+    "submit": "Soumettre",
+    "submitting": "Soumission en cours",
+    "setPasscode": "Définissez votre code d'accès pour commencer",
+    "setPasscodeDescription": "Veuillez mémoriser ou stocker en toute sécurité votre code d'accès. Vous en aurez besoin à chaque accès au portefeuille.",
+    "enterPasscode": "Entrez votre code d'accès pour continuer",
+    "enterPasscodeDescription": "Utilisez le même code d'accès que vous avez défini précédemment pour accéder à votre compte ou portefeuille.",
+    "enterPasscodeLabel": "Entrez le code d'accès",
+    "confirmPasscodeLabel": "Confirmez le code d'accès",
+    "forgotPasscode": "Mot de passe oublié",
+    "passcodeWarning": "Assurez-vous de vous souvenir du mot de passe pour une future connexion",
+    "error": {
+      "walletNotFoundError": "Aucun portefeuille trouvé. Veuillez en créer un.",
+      "passcodeLengthError": "Le code PIN doit comporter 6 chiffres.",
+      "passcodeMismatchError": "Les codes d'accès ne correspondent pas. Veuillez vous assurer que les deux champs du code correspondent parfaitement. Saisissez-le à nouveau et réessayez.",
+      "createWalletError": "Échec de la création du portefeuille.",
+      "incorrectPasscodeError": "Le code d'accès semble incorrect. Veuillez réessayer ou appuyer sur « Mot de passe oublié » si vous avez besoin d'aide pour le réinitialiser.",
+      "fetchWalletsError": "Échec du chargement des portefeuilles.",
+      "walletStatus": {
+        "temporarily_locked": "Vous avez atteint le nombre maximal de tentatives. Votre portefeuille est temporairement verrouillé. Veuillez réessayer ultérieurement.",
+        "permanently_locked": "Votre portefeuille a été définitivement bloqué suite à plusieurs tentatives infructueuses. Cliquez sur « Mot de passe oublié » pour réinitialiser votre portefeuille et continuer.",
+        "last_attempt_before_lockout": "Code d'accès incorrect. Dernière tentative avant le blocage définitif de votre portefeuille."
+      }
+    }
+  },
+  "ResetPasscodePage": {
+    "title": "Vous avez oublié votre code d'accès ?",
+    "subTitle": "Réinitialisez votre portefeuille pour récupérer l'accès et re-télécharger vos cartes.",
+    "resetInstruction": {
+      "question": "Que se passe-t-il lorsque vous oubliez votre code d'accès ?",
+      "info1": {
+        "message": "Votre portefeuille sera <strong>{{highlighter}}</strong> en toute sécurité.",
+        "highlighter": "réinitialisé"
+      },
+      "info2": {
+        "message": "Toutes les <strong>{{highlighter}}</strong> de votre portefeuille.",
+        "highlighter": "cartes précédemment stockées seront supprimées"
+      },
+      "info3": {
+        "message": "Vous serez guidé pour <strong>{{highlighter}}</strong>.",
+        "highlighter": "définir un nouveau code d'accès"
+      },
+      "info4": {
+        "message": "Vous pourrez ensuite <strong>{{highlighter}}</strong> depuis la source/les émetteurs d'origine.",
+        "highlighter": "re-télécharger vos cartes"
+      },
+      "info5": {
+        "message": "Cela maintient vos informations <strong>{{highlighter}}</strong>, même si votre appareil/portefeuille est perdu ou partagé.",
+        "highlighter": "en sécurité"
+      }
+    },
+    "setNewPasscode": "Définir un nouveau code d'accès",
+    "resetFailure": "Une erreur s'est produite lors de la réinitialisation de votre portefeuille. Veuillez réessayer dans un instant."
+  },
+  "IssuersPage": {
+    "Intro": {
+      "title": "Accéder à vos informations d’identification vérifiables",
+      "title2": "en toute simplicité !",
+      "subTitle": "Téléchargez et partagez en toute sécurité vos informations d'identification instantanément.",
+      "searchText": "Rechercher des émetteurs par nom"
+    },
+    "emptyContainerContent": "Aucun émetteur trouvé. ",
+    "containerHeading": "Liste des émetteurs",
+    "containerSubHeading": "Recherchez votre émetteur de confiance et choisissez un type d'identifiant à l'étape suivante.",
+    "errorContent": "Le service est actuellement indisponible. ",
+    "searchIssuer": {
+      "helpText": {
+        "info": "Recherchez par nom d'émetteur en utilisant uniquement des lettres, des chiffres, des traits d'union (-), des traits de soulignement (_) ou des crochets ( ).",
+        "error": "Veuillez saisir un nom d'émetteur valide. Seuls les lettres, chiffres, espaces, tirets (-), traits de soulignement (_) et crochets ( ) sont autorisés. Les caractères spéciaux ne sont pas autorisés."
+      }
+    }
+  },
+  "CredentialsPage": {
+    "searchText": "Rechercher un type d'identifiant",
+    "emptyContainerContent": "Aucune information d'identification trouvée. ",
+    "containerHeading": "Liste des types d'informations d'identification",
+    "containerSubHeading": "Choisissez un identifiant et confirmez votre identité à l'étape suivante.",
+    "errorContent": "Le service est actuellement indisponible.",
+    "errors": {
+      "authorizationGrantTypeNotSupportedByWallet": {
+        "code": "Erreur d'autorisation du type d'octroi non pris en charge!",
+        "message": "Merci pour votre patience ! Nous rencontrons actuellement des difficultés techniques. Veuillez réessayer plus tard ou contacter l'administrateur pour obtenir de l'aide!"
+      }
+    }
+  },
+  "CredentialTypesPage": {
+    "download": {
+      "error": {
+        "header": "Échec du téléchargement",
+        "subHeader": "Impossible de télécharger la carte. Veuillez cliquer sur le bouton « Accueil » pour lancer le processus."
+      },
+      "loading": {
+        "header": "Téléchargement des informations d'identification",
+        "subHeader": "Votre carte continuera à se télécharger même si vous actualisez ou changez d'écran. Vous pouvez télécharger une carte à la fois. Elle apparaîtra dans les Cartes enregistrées une fois terminée."
+      }
+    }
+  },
+  "RedirectionPage": {
+    "navigateButton": "Aller à la maison",
+    "loading": {
+      "title": "Téléchargement en cours...",
+      "subTitle": "Veuillez patienter un instant ! "
+    },
+    "success": {
+      "title": "Succès!",
+      "subTitle": "Vérifiez votre dossier de téléchargements !"
+    },
+    "error": {
+      "invalidSession": {
+        "title": "Session invalide",
+        "subTitle": "la session n'est pas valide ou la session est terminée"
+      },
+      "verification": {
+        "errMissingIssuanceDate": {
+          "title": "Date d'émission invalide",
+          "subTitle": "La date d'émission est invalide ou fixée dans le futur. "
+        },
+        "errInvalidIssuanceDate": {
+          "title": "Date d'émission invalide",
+          "subTitle": "La date d'émission est invalide ou fixée dans le futur. "
+        },
+        "errIssuanceDateIsFutureDate": {
+          "title": "Date d'émission invalide",
+          "subTitle": "La date d'émission est invalide ou fixée dans le futur. "
+        },
+        "errInvalidExpirationDate": {
+          "title": "Date d'expiration invalide",
+          "subTitle": "La date d'expiration n'est pas valide. "
+        },
+        "errVcExpired": {
+          "title": "Date d'expiration invalide",
+          "subTitle": "La date d'expiration n'est pas valide. "
+        },
+        "errInvalidValidFrom": {
+          "title": "Date de début invalide",
+          "subTitle": "La date n'est pas valide ou est définie dans le futur. "
+        },
+        "errValidFromIsFutureDate": {
+          "title": "Date de début invalide",
+          "subTitle": "La date n'est pas valide ou est définie dans le futur. "
+        },
+        "errInvalidValidUntil": {
+          "title": "Date de fin invalide",
+          "subTitle": "La date n'est pas valide. "
+        }
+      },
+      "generic": {
+        "title": "Une erreur s'est produite",
+        "subTitle": "En raison d'une erreur technique, nous n'avons pas pu télécharger la carte"
+      }
+    }
+  },
+  "AuthorizationPage": {
+    "error": {
+      "code": {
+        "invalid_redirect_uri": "Accès refusé!",
+        "invalid_client": "Accès refusé!"
+      },
+      "message": {
+        "invalid_redirect_uri": "Les informations d’identification ne peuvent pas être partagées car nous n’avons pas pu identifier qui les a demandées. ",
+        "invalid_client": "Les informations d’identification ne peuvent pas être partagées car nous n’avons pas pu identifier qui les a demandées. "
+      }
+    }
+  },
+  "PageNotFound": {
+    "navigateButton": "Aller à la maison",
+    "heading": "C'est une erreur",
+    "subHeading": "L'URL demandée {{pathname}} n'a pas été trouvé sur ce serveur."
+  },
+  "FAQPage": {
+    "title": "Questions fréquemment posées"
+  },
+  "FAQDropdown": {
+    "heading": "Questions fréquemment posées",
+    "item1": "Questions fréquemment posées"
+  },
+  "FAQ": {
+    "item1": {
+      "title": "Qui sont les émetteurs ?",
+      "description1": "Les émetteurs sont soit des organismes gouvernementaux, soit des entités de confiance du gouvernement, chargés de fournir des informations d'identification vérifiables au format PDF aux résidents sur demande."
+    },
+    "item2": {
+      "title": "Que sont les informations d’identification vérifiables ?",
+      "description1": "Les informations d'identification vérifiables sont des documents numériques qui aident les utilisateurs à partager des informations telles que l'identité ou les qualifications avec le fournisseur de services, qui peuvent être instantanément vérifiées. "
+    },
+    "item3": {
+      "title": "Comment puis-je télécharger un identifiant dans Inji Wallet ?",
+      "description1": "Étape 1 : Recherchez et choisissez un émetteur sur la page de destination et sélectionnez un type d'informations d'identification.",
+      "description2": "Étape 2 : Sur la page d'authentification, fournissez les détails requis.",
+      "description3": "Étape 3 : Le format PDF des informations d'identification vérifiables sera téléchargé dans le système."
+    },
+    "item4": {
+      "title": "Quelles informations dois-je fournir pour télécharger mon identifiant ?",
+      "description1": "L'émetteur des titres de compétences aurait fourni des détails tels que UIN/VID en cas d'identification nationale MOSIP ou de numéro de police, nom et date de naissance pour une carte d'assurance. "
+    },
+    "item5": {
+      "title": "Où puis-je trouver mon identifiant ?",
+      "description1": "Les informations d'identification vérifiables seront téléchargées dans le dossier Téléchargements de votre système."
+    },
+    "item6": {
+      "title": "Quels détails sont présents dans les informations d'identification PDF ?",
+      "description1": "Les détails recueillis dans le cadre du processus d’inscription seront présentés dans le PDF. "
+    },
+    "item7": {
+      "title": "Pourquoi je ne trouve pas la liste des émetteurs ?",
+      "description1": "Les raisons possibles de ce problème incluent :",
+      "description2": "1. Des erreurs techniques peuvent rendre le service temporairement indisponible, vous empêchant d'accéder à la liste des émetteurs.",
+      "description3": "2. Aucun émetteur n'a été configuré.",
+      "description4": "Dans les deux cas, veuillez contacter votre équipe technique pour résoudre le problème."
+    },
+    "item8": {
+      "title": "Que se passe-t-il lorsque je génère un justificatif vérifiable (VC) dans l'interface Web d'Inji Wallet ?",
+      "description1": "1. Vous sélectionnez un émetteur et le type de justificatif.",
+      "description2": "2. Redirige vers la page de connexion de l'émetteur pour l'authentification.",
+      "description3": "3. Après la connexion, l'émetteur fournit le VC, stocké de manière sécurisée au format JSON à l'aide de Durian. ",
+      "description4": "4. Un PDF avec les détails du VC et un code QR est généré.",
+      "description5": "5. Le code QR renvoie à l'URL de stockage du VC pour un partage facile."
+    },
+    "item9": {
+      "title": "Quel est le rôle du code QR dans le PDF des justificatifs ?",
+      "description1": "Le code QR dans le PDF renvoie à l'URL de stockage sécurisée du VC, ce qui facilite la numérisation et la récupération des justificatifs sans données denses."
+    },
+    "item10": {
+      "title": "Comment l'interface Web d'Inji Wallet garantit-elle que ma VC est stockée en toute sécurité ?",
+      "description1": "S'intègre au service de partage de données (Durian) de la plateforme d'identification MOSIP, stockant la VC sous forme d'objet JSON avec un accès protégé uniquement pour les vérificateurs autorisés."
+    },
+    "item11": {
+      "title": "Comment fonctionne la fonction de partage en ligne avec Inji Verify ?",
+      "description1": "1. Le PDF VC contient un code QR.",
+      "description2": "2. Le PDF peut être imprimé ou enregistré sur un téléphone. ",
+      "description3": "3. Le vérificateur (par exemple, Inji Verify) scanne le code QR. ",
+      "description4": "4. Inji Wallet autorise et partage la VC avec le vérificateur."
+    },
+    "item12": {
+      "title": "Pourquoi intégrer une URL dans le code QR au lieu des données VC complètes ?",
+      "description1": "L'intégration d'une URL réduit la densité du code QR pour une numérisation facile, permettant une vérification efficace entre appareils ou à distance."
+    },
+    "item13": {
+      "title": "Puis-je partager mon VC en ligne et hors ligne ?",
+      "description1": "1. En ligne : le vérificateur peut numériser à partir d'un PDF ou d'un écran de téléphone, et Inji Wallet autorise et partage le VC. ",
+      "description2": "2. Hors ligne : le PDF imprimé peut être présenté pour la numérisation et la récupération du VC."
+    },
+    "item14": {
+      "title": "Comment Inji Wallet vérifie-t-il et autorise-t-il le vérificateur pendant le partage en ligne ?",
+      "description1": "Les informations d'identification du vérificateur sont vérifiées à partir d'une liste interne. S'il est autorisé, Inji Wallet avec interface Web renvoie le VC au vérificateur en toute sécurité à l'aide d'un vp_token."
+    },
+    "item15": {
+      "title": "Qu'est-ce qu'OpenID4VP et comment est-il utilisé dans Inji Wallet ?",
+      "description1": "La norme OpenID4VP (OpenID for Verifiable Presentations) permet le partage sécurisé de VC. Inji Wallet génère un code QR pour le stockage des VC, permettant aux vérificateurs comme Inji Verify de demander et de recevoir des VC en toute sécurité."
+    },
+    "item16": {
+      "title": "Comment savoir si mon VC a été partagé en toute sécurité à l'aide d'Inji Wallet ??",
+      "description1": "Une fois que le vérificateur a scanné le code QR et qu'Inji Wallet l'a autorisé, le VC est fourni en toute sécurité au vérificateur, qui le valide et le confirme ensuite."
+    },
+    "item17": {
+      "title": "Que se passe-t-il si le code QR est scanné sur un appareil différent de celui sur lequel le VC a été généré ?",
+      "description1": "Prend en charge le partage entre appareils. Le vérificateur peut numériser à partir de n'importe quelle copie du PDF VC, et Inji Wallet vérifie et partage le VC en toute sécurité."
+    },
+    "item18": {
+      "title": "Inji Wallet peut-il prendre en charge différents formats de code QR ?",
+      "description1": "Oui. La génération basée sur la configuration permet aux codes QR de contenir : ",
+      "description2": "1. URL vers le stockage VC pour un partage facile, ou ",
+      "description3": "2. Données VC complètes au format JSON (format plus dense)."
+    },
+    "item19": {
+      "title": "Comment Inji Wallet gère-t-il la vérification des informations d'identification après le partage ?",
+      "description1": "Après le partage, Inji Verify vérifie l'authenticité du VC. Si elle est valide, le vérificateur confirme le statut de vérification des informations d'identification."
+    },
+    "item20": {
+      "title": "Quels types d'émetteurs d'informations d'identification sont pris en charge ?",
+      "description1": "Tout émetteur qui suit le protocole OpenID4VCI peut être approuvé dans Inji Wallet. Ces émetteurs fournissent les données nécessaires à l'émission et au téléchargement de VC."
+    },
+    "item21": {
+      "title": "Où puis-je trouver des informations plus détaillées sur les fonctionnalités introduites dans cette version ?",
+      "description1": "Consultez la <a href=\"https://docs.mosip.io/inji/inji-web/overview\" target=\"_blank\">documentation d'Inji Wallet</a> pour obtenir des étapes détaillées, des aperçus du système et des descriptions des nouvelles fonctionnalités."
+    },
+    "item22": {
+      "title": "Comment démarrer avec la fonctionnalité de partage en ligne dans Inji Wallet ?",
+      "description1": "Accédez aux VC via l'interface Web d'Inji Wallet, téléchargez et utilisez le code QR pour partager des informations d'identification en personne ou en ligne avec des vérificateurs. Détails dans le <a href=\"https://docs.mosip.io/inji/inji-web/function-overview/end-user-guide\" target=\"_blank\">guide de l'utilisateur </a>."
+    },
+    "item23": {
+      "title": "Comment puis-je basculer entre le VC intégré et le partage en ligne dans Inji Wallet ?",
+      "description1": "Configurer le qr_code_type dans les paramètres de l'émetteur Mimoto : ",
+      "description2": "1. EmbeddedVC : intègre le VC complet au format JSON (code QR plus dense) pour une utilisation hors ligne.",
+      "description3": "2. OnlineSharing : génère un code QR avec une URL vers le stockage VC en ligne, ce qui facilite la numérisation et le partage en ligne."
+    }
+  },
+  "DataShareExpiryModal": {
+    "title": "Validité du partage",
+    "subTitle": "Veuillez donner votre consentement pour définir une validité pour le partage du {{credentialName}}",
+    "content": {
+      "selectedDocument": "Document sélectionné",
+      "consent": "Validité du consentement *",
+      "validityTimesHeader": "Nombre de fois",
+      "validityTimesOptions": {
+        "once": "Une fois",
+        "thrice": "Trois fois",
+        "noLimit": "Aucune limite",
+        "custom": "Coutume"
+      },
+      "validityDate": "Date"
+    },
+    "success": "Procéder",
+    "cancel": "Dos",
+    "disclaimer": "Veuillez noter que le QR Code ne peut être partagé que le nombre de fois que vous avez choisi ici. ",
+    "toastText": "À venir"
+  },
+  "CustomExpiryModal": {
+    "title": "Veuillez saisir le nombre de fois que vous souhaitez utiliser cet identifiant ",
+    "error": "Veuillez saisir un numéro d'expiration valide supérieur à zéro. La limite maximale est de 50 pour contrôler les tentatives de vérification.",
+    "metrics": "Fois",
+    "success": "Procéder",
+    "cancel": "Annuler"
+  },
+  "ShareHandlerLoadingModal": {
+    "message": "Préparation de votre présentation d’identifiants sécurisée..."
+  },
+  "CredentialShareSuccessModal": {
+    "sharedWith": "Partagé avec {{verifierName}}",
+    "credentialsPresented": "Vos informations d'identification ont été présentées avec succès à {{verifierName}}",
+    "redirectMessage": "Redirection vers le vérificateur dans {{count}} secondes..."
+  },
+  "User": {
+    "Home": {
+      "title": "Maison",
+      "welcome": "Bienvenu"
+    },
+    "ProfileDropdown": {
+      "profile": "Profil",
+      "faq": "FAQ",
+      "logout": "Déconnexion"
+    },
+    "ProfilePage": {
+      "title": "Mon profil",
+      "homeTitle": "Accueil",
+      "fullName": "Nom complet",
+      "emailAddress": "Adresse e-mail",
+      "error": {
+        "title": "Profil non disponible",
+        "message": "Nous n'avons pas pu charger les détails de votre profil en raison d'un problème technique. Veuillez réessayer plus tard."
+      }
+    }
+  },
+  "StoredCards": {
+    "title": "Cartes Stockées",
+    "header": {
+      "addCards": "Ajouter des cartes"
+    },
+    "emptyScreen": {
+      "title": "Aucune Carte Stockée !",
+      "actionText": "Vous n'avez encore téléchargé aucune carte. Appuyez sur \"Ajouter des cartes\" pour commencer."
+    },
+    "search": {
+      "placeholder": "Recherchez vos cartes par nom",
+      "noResults": "Aucune carte ne correspond à votre recherche."
+    },
+    "cardView": {
+      "download": "Télécharger",
+      "menu": {
+        "view": "Voir",
+        "delete": "Supprimer"
+      },
+      "error": {
+        "downloadError": "Échec du téléchargement. Veuillez réessayer.",
+        "deleteError": "Échec de la suppression. Réessayez."
+      },
+      "delete": {
+        "confirmation": {
+          "title": "Supprimer la carte !",
+          "message": "Êtes-vous sûr de vouloir supprimer cette carte ?"
+        }
+      }
+    }
+  },
+  "Common": {
+    "home": "Maison",
+    "goToHome": "Aller à l'accueil",
+    "confirm": "Confirmer",
+    "cancel": "Annuler",
+    "error": {
+      "internalServerError": {
+        "title": "Erreur du serveur",
+        "message": "Un problème est survenu de notre côté. Veuillez réessayer plus tard."
+      },
+      "serviceUnavailable": {
+        "title": "Service indisponible",
+        "message": "Nous rencontrons actuellement des problèmes pour traiter votre demande. Veuillez réessayer plus tard."
+      },
+      "invalidWalletRequest": {
+        "title": "Une erreur s'est produite",
+        "message": "Nous n'avons pas pu vérifier les informations de votre portefeuille. Veuillez réessayer plus tard."
+      },
+      "invalidRequest": {
+        "title": "Erreur de la demande",
+        "message": "Votre demande contient des informations invalides. Veuillez réessayer plus tard."
+      },
+      "unknownError": {
+        "title": "Une erreur s'est produite",
+        "message": "Une erreur inattendue s'est produite. Veuillez actualiser la page ou réessayer sous peu."
+      },
+      "networkError": {
+        "title": "Pas de connexion Internet",
+        "message": "Veuillez vérifier votre connexion Internet et réessayer."
+      }
+    }
+  },
+  "VerifierTrustPage": {
+    "modal": {
+      "title": "Vérificateur inconnu",
+      "description": "Assurez-vous de reconnaître ou de faire confiance à ce vérificateur. \nUne fois que vous faites confiance à ce vérificateur:",
+      "benefitSaveSecurely": "Votre portefeuille se souviendra de ce Vérificateur comme étant fiable.",
+      "benefitAddToTrustedList": "Ce vérificateur sera ajouté à votre liste de confiance.",
+      "benefitSkipReviewFuture": "Les futures demandes de vérification de ce Vérificateur seront automatiquement approuvées.",
+      "trustButton": "Oui, je fais confiance à ce Vérificateur",
+      "notTrustButton": "Non, je ne fais pas confiance à ce Vérificateur",
+      "infoTooltipButton": "Que signifie faire confiance ?",
+      "infoTooltipText": "Faire confiance à un vérificateur leur permet de demander vos informations d'identification. Vous choisirez toujours les informations d'identification à partager à l'étape suivante."
+    },
+    "TrustRejectionModal": {
+      "title": "Êtes-vous sûr de ne pas vouloir faire confiance à ce vérificateur ?",
+      "description": "Cette demande ne peut pas continuer à moins que vous ne fassiez confiance à ce vérificateur. Si vous ne le faites pas, la demande s'arrêtera et vous devrez commencer une nouvelle demande avec votre vérificateur.",
+      "confirmButton": "Ne pas faire confiance et annuler",
+      "goBackButton": "Retourner"
+    },
+    "UserAuthorizationPage": {
+      "validateVerifierError": "Échec de la validation de la demande du vérificateur. Veuillez réessayer.",
+      "invalidVerifierResponse": "Réponse du vérificateur non valide reçue.",
+      "addTrustedVerifierError": "Échec de l'ajout du vérificateur à la liste de confiance."
+    },
+    "ErrorCard": {
+      "defaultTitle": "Une erreur s’est produite",
+      "defaultDescription": "Nous n’avons pas pu terminer votre demande. Veuillez fermer et réessayer plus tard.",
+      "technicalTitle": "Oups ! Une erreur est survenu.",
+      "technicalDescription": "Un problème technique est survenu lors du traitement de votre demande. Vous pouvez réessayer dans un instant.",
+      "closeButton": "Fermer"
+    },
+    "RetryCard": {
+      "defaultTitle": "Une erreur s’est produite",
+      "defaultDescription": "Nous n’avons pas pu terminer votre demande. Veuillez réessayer.",
+      "retryButton": "Réessayer"
+    },
+    "loadingCard": {
+      "title": "Récupération des informations du vérificateur...",
+      "subtitle": "Veuillez patienter pendant que nous vérifions la demande et préparons vos informations d'identification."
+    }
+  },
+  "CredentialRequestModal": {
+    "loading": {
+      "title": "Chargement des informations d'identification",
+      "message": "Veuillez patienter pendant que nous récupérons vos informations d'identification disponibles..."
+    },
+    "header": {
+      "title": "{{verifierName}} demande ces informations d'identification",
+      "description": "Sélectionnez les informations d'identification que vous souhaitez partager"
+    },
+    "error": {
+      "title": "Erreur lors du chargement des informations d'identification",
+      "walletIdMessage": "Veuillez vous assurer que vous êtes connecté et que votre portefeuille est déverrouillé."
+    },
+    "noCredentials": {
+      "message": "Aucune information d'identification disponible"
+    },
+    "buttons": {
+      "cancel": "Annuler",
+      "consentShare": "J'accepte et partage"
+    }
+  },
+  "NoMatchingCredentialsModal": {
+    "title": "Aucune information d'identification correspondante trouvée",
+    "description": "Veuillez télécharger les informations d'identification correspondantes et réessayer le processus de partage",
+    "goToHomeButton": "Retourner"
+  },
+  "LogoutConfirmation": {
+    "title": "Êtes-vous sûr de vouloir partir ?",
+    "message": "Si vous revenez en arrière maintenant, vous serez déconnecté et devrez vous reconnecter pour continuer.",
+    "logoutButton": "Oui, se déconnecter",
+    "stayButton": "Rester sur cette page"
+  }
+}

@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --iw-font-base: "Inter", sans-serif;
+        --iw-font-montserrat: "Montserrat", sans-serif;
+        --iw-color-background: #FFFFFF;
+        --iw-color-header: #000000;
+        --iw-color-footer: #FFFFFF;
+        --iw-color-title: #000000;
+        --iw-color-subTitle: #717171;
+        --iw-color-searchTitle: #3E3E3E;
+        --iw-color-primary: #F2680C;
+        --iw-color-secondary: #451691;
+        --iw-color-lightPrimary: #fff1eb;
+        --iw-color-lightSecondary: #f2ebf8;
+        --iw-color-tertiary: #951F6F;
+        --iw-color-faqAccordionHover: #e0e0e0;
+        --iw-color-shadow: #18479329;
+        --iw-color-shadow-with-opacity: #1847930F;
+        --iw-color-selected-shadow: #164EA840;
+        --iw-color-spinningLoaderPrimary: #951F6F;
+        --iw-color-spinningLoaderSecondary: #5B03AD;
+        --iw-color-navigationBar: #F2FBFF;
+        --iw-color-languageGlobeIcon: #951F6F;
+        --iw-color-languageArrowIcon: #809FB8;
+        --iw-color-languageCheckIcon: #951F6F;
+        --iw-color-closeIcon: #8E8E8E;
+        --iw-color-searchIcon: #8E8E8E;
+        --iw-color-tileBackground: #FFFFFF;
+        --iw-color-shieldSuccessIcon: #4b9d1f;
+        --iw-color-shieldErrorIcon: #EF4444;
+        --iw-color-shieldLoadingIcon: #FF5300;
+        --iw-color-shieldSuccessShadow: #f1f7ee;
+        --iw-color-shieldErrorShadow: #FEF2F2;
+        --iw-color-shieldLoadingShadow: #f6dfbe;
+        --iw-color-backDrop: #000000;
+        --iw-color-borderDark: #717171;
+        --iw-color-borderLight: #E8EBEC;
+        --iw-color-arrowDown: #164EA840;
+        --iw-color-hoverBackGround: #164EA840;
+        --iw-color-text: #FFFFFF;
+        --iw-color-subText: #A0A8AC;
+        --iw-color-disclaimerBackGround: #FFF7E5;
+        --iw-color-disclaimerText: #8B6105;
+        --iw-color-dashboardSideBarMenuIcon: #6F6F6F;
+        --iw-color-dashboardSideBarMenuIconActive: #2B011C;
+        --iw-color-grayMedium: #707070;
+        --iw-color-grayLight: #C1C1C1;
+        --iw-color-grayDark: #676766;
+        --iw-color-grayTransparent: #D2D5D933;
+        --iw-color-paleGray: #F7F7F8;
+        --iw-color-textTertiary: #475467;
+        --iw-color-textSecondary: #344054;
+        --iw-color-darkRed: #D52929;
+        --iw-color-brightRed: #D73E3E;
+        --iw-color-red: #DA262E;
+        --iw-color-deepVioletIndigo: #5B03AD;
+        --iw-color-pink50: #FAEFEF;
+        --iw-color-darkGrayishBlue: #101828;
+        --iw-color-info: #7B7B7B;
+        --iw-color-avatarPlaceholder: #DDDDDD;
+        --iw-color-avatarText: #1A001D;
+        --iw-color-darkGreen: #1F9F60;
+        --iw-color-disabled: #ADB6BD;
+        --iw-color-dropdown-active-bg: #F7F3F0;
+        --iw-color-dropdown-text: #232B38;
+        --iw-color-paleViolet: #FAF8FF;
+    }
+    [class="emerald_theme"] {
+        --iw-font-base: "Inter", sans-serif;
+        --iw-color-background: #FFFFFF;
+        --iw-color-header: #000000;
+        --iw-color-footer: #FFFFFF;
+        --iw-color-title: #000000;
+        --iw-color-subTitle: #717171;
+        --iw-color-searchTitle: #3E3E3E;
+        --iw-color-primary: #0FAC8B;
+        --iw-color-secondary: #00a3dd;
+        --iw-color-lightPrimary: #fff1eb;
+        --iw-color-lightSecondary: #f2ebf8;
+        --iw-color-tertiary: #951F6F;
+        --iw-color-faqAccordionHover: #e0e0e0;
+        --iw-color-shadow: #18479329;
+        --iw-color-selected-shadow: #164EA840;
+        --iw-color-spinningLoaderPrimary: #0FAC8B;
+        --iw-color-spinningLoaderSecondary: #00a3dd;
+        --iw-color-navigationBar: #F2FBFF;
+        --iw-color-languageGlobeIcon: #0FAC8B;
+        --iw-color-languageArrowIcon: #0FAC8B;
+        --iw-color-languageCheckIcon: #0FAC8B;
+        --iw-color-closeIcon: #8E8E8E;
+        --iw-color-searchIcon: #8E8E8E;
+        --iw-color-tileBackground: #FFFFFF;
+        --iw-color-shieldSuccessIcon: #4b9d1f;
+        --iw-color-shieldErrorIcon: #EF4444;
+        --iw-color-shieldLoadingIcon: #0FAC8B;
+        --iw-color-shieldSuccessShadow: #f1f7ee;
+        --iw-color-shieldErrorShadow: #FEF2F2;
+        --iw-color-shieldLoadingShadow: #f6dfbe;
+        --iw-color-backDrop: #000000;
+        --iw-color-borderDark: #717171;
+        --iw-color-borderLight: #E8EBEC;
+        --iw-color-arrowDown: #164EA840;
+        --iw-color-hoverBackGround: #164EA840;
+        --iw-color-text: #FFFFFF;
+        --iw-color-subText: #A0A8AC;
+        --iw-color-disclaimerBackGround: #FFF7E5;
+        --iw-color-disclaimerText: #8B6105;
+        --iw-color-grayMedium: #707070;
+        --iw-color-grayLight: #C1C1C1;
+        --iw-color-grayDark: #676766;
+        --iw-color-grayTransparent: #D2D5D933;
+        --iw-color-paleGray: #F7F7F8;
+        --iw-color-textTertiary: #475467;
+        --iw-color-textSecondary: #344054;
+        --iw-color-darkRed: #D52929;
+        --iw-color-brightRed: #D73E3E;
+        --iw-color-red: #DA262E;
+        --iw-color-deepVioletIndigo: #5B03AD;
+        --iw-color-pink50: #FAEFEF;
+        --iw-color-darkGrayishBlue: #101828;
+        --iw-color-darkGreen: #1F9F60;
+        --iw-color-disabled: #ADB6BD;
+        --iw-color-dropdown-active-bg: #F7F3F0;
+        --iw-color-dropdown-text: #232B38;
+        --iw-color-paleViolet: #FAF8FF;
+    }
+}
+
+@layer components {
+    .bg {
+        background: transparent url('./assets/Background.svg') no-repeat;
+        background-size: cover;
+        background-position: top;
+        opacity: 1;
+    }
+    .bg-home-banner {
+        background-image: url('./assets/HomeBannerGradient.png');
+        background-size: 100% 100%;
+        background-position: center;
+    }
+    .no-scroll {
+        overflow: hidden;
+    }
+
+  .gradient-outline-input {
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: box-shadow .15s ease, border-image .15s ease;
+  }
+
+  .gradient-outline-input:focus-within, .gradient-outline-input:focus {
+    outline: none;
+    border-image: linear-gradient(90deg, var(--iw-color-primary), var(--iw-color-secondary)) 1;
+
+   }
+
+  .gradient-outline-input:-moz-focusring {
+    outline: none;
+  }
+}
+
+.inji-toast {
+  position: relative !important;
+  border-radius: 14px !important;
+  display: flex !important;
+  align-items: center;
+  font-family: var(--iw-font-base);
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.5rem 1rem !important;
+  box-shadow: none !important;
+}
+
+.inji-toast--success {
+  background: #9DCFBB !important;
+  color: #384455 !important;
+}
+
+.inji-toast--error {
+  background: #EFB3B5 !important;
+  color: #384455 !important;
+}
+
+.inji-toast--warning {
+  background: #FFE799 !important;
+  color: #384455 !important;
+}
+
+.inji-toast--info {
+  background: #99DAFE !important;
+  color: #384455 !important;
+}
+
+.Toastify__toast-icon {
+  width: 27px !important;
+  height: 27px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Toastify__toast-icon img,
+.Toastify__toast-icon svg {
+  width: 27px !important;
+  height: 27px !important;
+}
+
+.Toastify__close-button {
+  position: absolute !important;
+  right: 18px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  color: #384455 !important;
+  opacity: 1 !important;
+  font-size: 1.5rem !important;
+  z-index: 2;
+  padding: 0 !important;
+  background: none !important;
+  border: none !important;
+  cursor: pointer;
+}

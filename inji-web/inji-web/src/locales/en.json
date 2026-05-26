@@ -1,0 +1,563 @@
+{
+  "PageTemplate": {
+    "Header": {
+      "home": "Home",
+      "faq": "FAQ",
+      "login": "Login",
+      "logout": "Logout"
+    },
+    "Footer": {
+      "product": "A MOSIP Product",
+      "copyRight": "© 2024 MOSIP. All rights reserved."
+    }
+  },
+  "HomePage": {
+    "Banner": {
+      "heading": "Effortlessly Access and Manage Your Digital Credentials",
+      "description": "Make your data portable with trust. Securely manage your digital documents with our easy-to-use web-based wallet.",
+      "buttontext": "Get Started"
+    },
+    "Features": {
+      "heading": "Features of Inji Wallet",
+      "description1": "Seamless and secure management of verifiable credentials",
+      "description2": "for trusted digital interactions."
+    },
+    "FeatureItem1": {
+      "heading": "Access Your Credentials, Anywhere You Need",
+      "item1": "Credentials simplified",
+      "description1": "Keep all your essential documents",
+      "item2": "No more paperwork, all in one place",
+      "description2": "Effortlessly download, store, and retrieve your documents with ease. Win, win, win."
+    },
+    "FeatureItem2": {
+      "heading": "Your Documents Downloaded in Seconds",
+      "item1": "Download with confidence",
+      "description1": "Save your important documents instantly",
+      "item2": "Safe and sound",
+      "description2": "Download IDs, licenses, and more, in one secure location."
+    },
+    "FeatureItem3": {
+      "heading": "Easy Sharing",
+      "item1": "Share with a QR code",
+      "description1": "Seamlessly share your IDs and certificates on the go. Just present the QR code of your document, to be scanned and shared.",
+      "item2": "Read, set, share",
+      "description2": "QR code verified in real time."
+    },
+    "FeatureItem4": {
+      "heading": "Secure and Private",
+      "item1": "Your credentials, protected",
+      "description1": "Your data stays private, with the built-in security mechanism.",
+      "item2": "Rest easy",
+      "description2": "Keep your credentials safe, so you can focus on what matters."
+    },
+    "FeatureItem5": {
+      "heading": "Wider Access & Compatibility",
+      "item1": "Available on your favourite browser",
+      "description1": "Inji Wallet works with Chrome, Safari, Firefox, and Edge.",
+      "item2": "Always within reach",
+      "description2": "Convenience meets accessibility wherever you are, ensuring your documents are always within reach."
+    },
+    "QuickTip":{
+      "heading":"Quick Tips for Instantly Downloading Your Credentials",
+      "toastText":"Coming soon",
+      "buttontext":"Learn More"
+    },
+    "Login":{
+      "loginTitle":"Log In",
+      "loginDescription":"Log in with your account or continue as a guest to access your credentials.",
+      "loginNote":"Some features may be limited in guest mode.",
+      "loginDescriptionOVP":"Continue to share credentials.",
+      "loginNoteOVP":"Log in to share your credentials with the service you’re trying to access.",
+      "loggingIn":"Logging In",
+      "loginGoogle":"Continue With Google",
+      "loginGuest":"Continue as Guest"
+    },
+    "LoginFailedModal":{
+      "failureMessage":"Login Failed",
+      "failureDescription":"Your login attempt has failed. Please check your credentials and try again",
+      "retry":"Retry"
+    }
+  },
+  "Layout": {
+    "VCDownload": {
+      "success": "Your {{cardType}} has been downloaded successfully.",
+      "error": "Oops! Something went wrong. Your {{cardType}} couldn’t be downloaded. Please reselect the issuer and try again."
+    }
+  },
+  "PasscodePage":{
+    "submit":"Submit",
+    "submitting":"Submitting",
+    "setPasscode":"Set your passcode to get started",
+    "setPasscodeDescription":"Please remember or securely store your passcode. You’ll need it each time you access the wallet.",
+    "enterPasscode":"Enter Your Passcode to Continue",
+    "enterPasscodeDescription":"Use the same passcode you set earlier to access your account or wallet.",
+    "enterPasscodeLabel": "Enter Passcode",
+    "confirmPasscodeLabel":"Confirm Passcode",
+    "forgotPasscode":"Forgot Passcode",
+    "passcodeWarning":"Make sure you remember the password for future login",
+    "error":{
+      "walletNotFoundError":"Wallet not found",
+      "passcodeLengthError":"Please Enter 6 digits in the Pin",
+      "passcodeMismatchError":"Passcodes do not match. Please ensure both passcode fields match exactly. Re-enter and try again.",
+      "createWalletError":"Wallet creation unsuccessful",
+      "incorrectPasscodeError":"The passcode doesn’t seem right. Please try again, or tap ‘Forgot Passcode’ if you need help resetting it",
+      "fetchWalletsError":"Error in fetching wallets",
+      "walletStatus": {
+        "temporarily_locked": "You've reached the maximum number of attempts. Your wallet is now temporarily locked. Please try again later",
+        "permanently_locked": "Your wallet has been permanently locked due to multiple failed attempts. Please click on forgot password to reset your wallet to continue",
+        "last_attempt_before_lockout": "Incorrect passcode. Last attempt remaining before your wallet is permanently locked"
+      }
+    }
+  },
+  "ResetPasscodePage": {
+    "title": "Forgot Your Passcode?",
+    "subTitle":"Reset your wallet to regain access and re-download your cards.",
+    "resetInstruction": {
+      "question": "What happens when you forget your passcode?",
+      "info1": {
+        "message":"Your wallet will be securely <strong>{{highlighter}}</strong>.",
+        "highlighter": "reset"
+      },
+      "info2": {
+        "message": "All previously stored <strong>{{highlighter}}</strong> from your wallet.",
+        "highlighter": "cards will be deleted"
+      },
+      "info3": {
+        "message": "You'll be guided to <strong>{{highlighter}}</strong>.",
+        "highlighter": "set a new passcode"
+      },
+      "info4": {
+        "message": "You can then <strong>{{highlighter}}</strong>. from the original source/issuers.",
+        "highlighter": "re-download cards"
+      },
+      "info5": {
+        "message": "This keeps your information <strong>{{highlighter}}</strong>, even if your device/wallet is lost or shared.",
+        "highlighter": "safe"
+      }
+    },
+    "setNewPasscode": "Set New Passcode",
+    "resetFailure": "Something went wrong while resetting your wallet. Please try again in a moment."
+  },
+  "IssuersPage": {
+    "Intro": {
+      "title": "Access your Verifiable Credentials",
+      "title2": "with ease!",
+      "subTitle": "Securely download and share your credentials instantly.",
+      "searchText": "Search issuers by name"
+    },
+    "emptyContainerContent": "No issuers found. Please refresh your browser window or try again later",
+    "containerHeading": "List of Issuers",
+    "containerSubHeading": "Search for your trusted issuer and choose a credential type in the next step.",
+    "errorContent": "The service is currently unavailable now. Please try again later.",
+    "searchIssuer": {
+      "helpText": {
+        "info": "Search by issuer name using letters, numbers, hyphens (-), underscores (_) or brackets ( ) only.",
+        "error": "Please enter a valid issuer name. Only letters, numbers, spaces, hyphens (-), underscores (_), and brackets ( ) are allowed. Special characters are not permitted."
+      }
+    }
+  },
+  "CredentialsPage": {
+    "searchText": "Search Credential Type",
+    "emptyContainerContent": "No Credentials found. Please refresh your browser window or try again later",
+    "containerHeading": "List of Credential Types",
+    "containerSubHeading": "Choose a credential, and confirm your identity in the next step.",
+    "errorContent": "The service is currently unavailable now. Please try again later.",
+    "errors": {
+      "authorizationGrantTypeNotSupportedByWallet": {
+        "code": "Grant type not supported authorization error!",
+        "message": "Thanks for your patience! We're experiencing technical difficulties right now. Please try again later or contact the admin for further assistance!"
+      }
+    }
+  },
+  "CredentialTypesPage": {
+    "download": {
+      "error": {
+        "header": "Download Failed",
+        "subHeader": "Unable to download the card. Please click on \"Go to Home\" button to start the process."
+      },
+      "loading": {
+        "header": "Downloading Credential",
+        "subHeader": "Your card will keep downloading even if you refresh or switch screens. You can download one card at a time. It’ll appear in Stored Cards when done."
+      }
+    }
+  },
+  "RedirectionPage": {
+    "navigateButton": "Go To Home",
+    "loading": {
+      "title": "Download in progress...",
+      "subTitle": "Please wait a moment! We're converting your verifiable credentials to PDF"
+    },
+    "success": {
+      "title": "Success!",
+      "subTitle": "Check your downloads folder!"
+    },
+    "error": {
+      "invalidSession": {
+        "title": "Invalid Session",
+        "subTitle": "session is not valid or session is completed"
+      },
+      "verification": {
+        "errMissingIssuanceDate": {
+          "title": "Invalid Issuance Date",
+          "subTitle": "Issuance date is invalid or set in the future. Check for a valid date."
+        },
+        "errInvalidIssuanceDate": {
+          "title": "Invalid Issuance Date",
+          "subTitle": "Issuance date is invalid or set in the future. Check for a valid date."
+        },
+        "errIssuanceDateIsFutureDate": {
+          "title": "Invalid Issuance Date",
+          "subTitle": "Issuance date is invalid or set in the future. Check for a valid date."
+        },
+        "errInvalidExpirationDate": {
+          "title": "Invalid Expiration Date",
+          "subTitle": "Expiration date is invalid. Check for a valid date"
+        },
+        "errVcExpired": {
+          "title": "Invalid Expiration Date",
+          "subTitle": "Expiration date is invalid. Check for a valid date"
+        },
+        "errInvalidValidFrom": {
+          "title": "Invalid Start Date",
+          "subTitle": "Date is invalid or set in the future. Check for a valid date."
+        },
+        "errValidFromIsFutureDate": {
+          "title": "Invalid Start Date",
+          "subTitle": "Date is invalid or set in the future. Check for a valid date."
+        },
+        "errInvalidValidUntil": {
+          "title": "Invalid End Date",
+          "subTitle": "Date is invalid. Check for a valid date"
+        }
+      },
+      "generic": {
+        "title": "An Error Occurred",
+        "subTitle": "Due to technical error, we were unable to download the card"
+      }
+    }
+  },
+  "AuthorizationPage": {
+    "error": {
+      "code": {
+        "invalid_redirect_uri":"Access Denied!",
+        "invalid_client": "Access Denied!"
+      },
+      "message": {
+        "invalid_redirect_uri":"Credentials cannot be shared because we couldn’t identify who requested them. Please contact the admin for help.",
+        "invalid_client": "Credentials cannot be shared because we couldn’t identify who requested them. Please contact the admin for help."
+      }
+    }
+  },
+  "PageNotFound": {
+    "navigateButton": "Go To Home",
+    "heading": "That's an error",
+    "subHeading": "The requested URL {{pathname}} was not found on this server."
+  },
+  "FAQPage": {
+    "title": "FAQ"
+  },
+  "FAQDropdown": {
+    "heading": "FAQ",
+    "item1": "FAQs"
+  },
+  "FAQ": {
+    "item1": {
+      "title": "Who are issuers?",
+      "description1": "Issuers are either governmental bodies or entities trusted by the government, responsible for providing verifiable credentials in PDF format to residents upon request."
+    },
+    "item2": {
+      "title": "What are verifiable credentials?",
+      "description1": "Verifiable credentials are digital documents that help users to share information like identity or qualifications to the service provider which can be instantly verified. They're issued by trusted entities and can be cryptographically verified for authenticity. These credentials streamline identity verification processes."
+    },
+    "item3": {
+      "title": "How can I download a credential in Inji Wallet?",
+      "description1": "Step 1: Search & choose an Issuer from the landing page and select a credential type.",
+      "description2": "Step 2: In the authentication page, provide required details.",
+      "description3": "Step 3: PDF format of the verifiable credential will be downloaded into the system."
+    },
+    "item4": {
+      "title": "What details I need to provide to download my credential?",
+      "description1": "The credential issuer would have provided details like UIN/VID in case of MOSIP National ID or Policy number, Name and DoB for an Insurance card. This information has to be fed to the authentication system to enable download."
+    },
+    "item5": {
+      "title": "Where can I find my credential?",
+      "description1": "The verifiable credential will be downloaded into the Downloads folder of your system."
+    },
+    "item6": {
+      "title": "What details are present in the PDF credential?",
+      "description1": "Details collected as part of the registration process will be presented in the PDF. At present, for Insurance use case, one can find Policy details like Name, DoB."
+    },
+    "item7": {
+      "title": "Why I am not finding the list of issuers?",
+      "description1": "Possible reasons for this issue include:",
+      "description2": "1. Technical errors may render the service temporarily unavailable, preventing you from accessing the list of issuers.",
+      "description3": "2. No issuers have been configured.",
+      "description4": "In either case, please contact your technical team to address the issue."
+    },
+    "item8": {
+      "title": "What happens when I generate a Verifiable Credential (VC) in Inji Wallet's Web Interface?",
+      "description1": "1. You select an issuer and the type of credential.",
+      "description2": "2. Redirects to the issuer's login page for authentication.",
+      "description3": "3. After login, the issuer provides the VC, stored securely as JSON using Durian. ",
+      "description4": "4.A PDF with VC details and a QR code is generated.",
+      "description5": "5.QR code links to VC storage URL for easy sharing."
+    },
+    "item9": {
+      "title": "What is the role of the QR code in the credential PDF?",
+      "description1": "The QR code in the PDF links to the secure VC storage URL, making it easy to scan and retrieve credentials without dense data."
+    },
+    "item10": {
+      "title": "How does Inji Wallet’s Web Interface ensure my VC is stored securely?",
+      "description1": "Integrates with the Data Share service (Durian) from the MOSIP ID platform, storing the VC as a JSON object with access protected for only authorized verifiers."
+    },
+    "item11": {
+      "title": "How does the online sharing feature work with Inji Verify?",
+      "description1": "1. VC PDF contains a QR code.",
+      "description2": "2. PDF can be printed or saved on a phone. ",
+      "description3": "3. Verifier (e.g., Inji Verify) scans the QR code. ",
+      "description4": "4. Inji Wallet authorizes and shares the VC with the verifier."
+    },
+    "item12": {
+      "title": "Why embed a URL in the QR code instead of full VC data?",
+      "description1": "Embedding a URL reduces QR code density for easy scanning, allowing efficient cross-device or remote verification."
+    },
+    "item13": {
+      "title": "Can I share my VC both online and offline?",
+      "description1": "1. Online : Verifier can scan from a PDF or phone screen, and Inji Wallet authorizes and shares the VC. ",
+      "description2": "2. Offline : Printed PDF can be presented for scanning and VC retrieval."
+    },
+    "item14": {
+      "title": "How does Inji Wallet verify and authorize the verifier during online sharing?",
+      "description1": "Verifier credentials are checked from an internal list. If authorized, Inji Wallet with web interface sends the VC back to the verifier securely using a vp_token."
+    },
+    "item15": {
+      "title": "What is OpenID4VP, and how is it used in Inji Wallet?",
+      "description1": "OpenID4VP (OpenID for Verifiable Presentations) standard allows secure sharing of VCs. Inji Wallet generates a QR code for VC storage, enabling verifiers like Inji Verify to securely request and receive VCs."
+    },
+    "item16": {
+      "title": "How do I know my VC was securely shared using Inji Wallet??",
+      "description1": "After the verifier scans the QR code and Inji Wallet authorizes it, the VC is securely provided to the verifier, who then validates and confirms it."
+    },
+    "item17": {
+      "title": "What happens if the QR code is scanned on a different device than where the VC was generated?",
+      "description1": "Supports cross-device sharing. The verifier can scan from any copy of the VC PDF, and Inji Wallet verifies and shares the VC securely."
+    },
+    "item18": {
+      "title": "Can Inji Wallet support different QR code formats?",
+      "description1": "Yes. Config-based generation allows QR codes to either contain: ",
+      "description2": "1. URL to VC storage for easy sharing, or ",
+      "description3": "2. Full VC data in JSON (denser format)."
+    },
+    "item19": {
+      "title": "How does Inji Wallet handle credential verification after sharing?",
+      "description1": "After sharing, Inji Verify checks VC authenticity. If valid, the verifier confirms the credential's verification status."
+    },
+    "item20": {
+      "title": "What kind of credential issuers are supported?",
+      "description1": "Any issuer that follows the OpenID4VCI protocol can be trusted in Inji Wallet. These issuers provide data required to issue and download VCs."
+    },
+    "item21": {
+      "title": "Where can I find more detailed information about the features introduced in this release?",
+      "description1": "Refer to the <a href=\"https://docs.mosip.io/inji/inji-web/overview\" target=\"_blank\">Inji Wallet documentation</a> for detailed steps, system overviews, and descriptions of new features."
+    },
+    "item22": {
+      "title": "How do I get started with the online sharing feature in Inji Wallet?",
+      "description1": "Access VCs via Inji Wallet’s Web Interface, download, and use the QR code to share credentials in person or online with verifiers. Details in the <a href=\"https://docs.mosip.io/inji/inji-web/functional-overview/end-user-guide\" target=\"_blank\"> user guide </a> ."
+    },
+    "item23": {
+      "title": "How can I toggle between embedded VC and Online Sharing in Inji Wallet?",
+      "description1": "Configure qr_code_type in Mimoto issuer's settings: ",
+      "description2": "1. EmbeddedVC: Embeds the full VC in JSON format (denser QR code) for offline use.",
+      "description3": "2. OnlineSharing: Generates a QR code with a URL to the online VC storage, making it easier to scan and share online."
+    }
+  },
+  "DataShareExpiryModal": {
+    "title": "Share Validity",
+    "subTitle": "Please provide your consent to set a validity for sharing the {{credentialName}}",
+    "content": {
+      "selectedDocument": "Selected Document",
+      "consent": "Consent Validity *",
+      "validityTimesHeader": "Number of times",
+      "validityTimesOptions": {
+        "once": "Once",
+        "thrice": "Thrice",
+        "noLimit": "No Limit",
+        "custom": "Custom"
+      },
+      "validityDate": "Date"
+    },
+    "success": "Proceed",
+    "cancel": "Back",
+    "disclaimer": "Please note that the QR code can be shared only for the number of times you have chosen here. To use the QR code for sharing again, you have to download the PDF again.",
+    "toastText": "Coming soon"
+  },
+  "CustomExpiryModal": {
+    "title": "Please enter the number of times you want to use this credential ",
+    "error": "Please enter a valid expiry number above zero. The maximum limit is 50 to control verification attempts.",
+    "metrics": "Times",
+    "success": "Proceed",
+    "cancel": "Cancel"
+  },
+  "ShareHandlerLoadingModal": {
+    "message": "Preparing your secure credential presentation..."
+  },
+  "CredentialShareSuccessModal": {
+    "sharedWith": "Shared with {{verifierName}}",
+    "credentialsPresented": "Your credentials were successfully presented to {{verifierName}}",
+    "redirectMessage": "Redirecting to verifier in {{count}} seconds..."
+  },
+  "User": {
+    "Home": {
+      "title": "Home",
+      "welcome": "Welcome"
+    },
+    "ProfileDropdown": {
+      "profile": "Profile",
+      "faq": "FAQ",
+      "logout": "Logout"
+    },
+    "ProfilePage":{
+      "title":"My Profile",
+      "homeTitle":"Home",
+      "fullName":"Full Name",
+      "emailAddress":"Email Address",
+      "error": {
+        "title": "Profile Not Available",
+        "message": "We couldn’t load your profile details due to a technical issue. Please try again later."
+      }
+    }
+  },
+  "StoredCards": {
+    "title": "Stored Cards",
+    "header": {
+      "addCards": "Add Cards"
+    },
+    "emptyScreen": {
+      "title": "No Cards Stored!",
+      "actionText": "You haven't downloaded any cards yet. Tap \"Add Cards\" to get started."
+    },
+    "search": {
+      "placeholder": "Search your cards by Name",
+      "noResults": "No cards match your search."
+    },
+    "cardView": {
+      "download": "Download",
+      "menu": {
+        "view": "View",
+        "delete": "Delete"
+      },
+      "error": {
+        "downloadError": "Download failed. Please retry.",
+        "deleteError": "Failed to delete. Try again."
+      },
+      "delete": {
+        "confirmation": {
+          "title": "Delete Card!",
+          "message": "Are you sure you want to delete this card?"
+        }
+      }
+    }
+  },
+  "Common": {
+    "home": "Home",
+    "goToHome": "Go to Home",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "error": {
+      "internalServerError": {
+        "title": "Server Error",
+        "message": "Something went wrong on our end. Please try again later."
+      },
+      "serviceUnavailable": {
+        "title": "Service Unavailable",
+        "message": "We're currently experiencing some issues processing your request. Please try again later"
+      },
+      "invalidWalletRequest": {
+        "title": "Something Went Wrong",
+        "message": "We couldn't verify your wallet information. Please try again later."
+      },
+      "invalidRequest": {
+        "title": "Request Error",
+        "message": "Your request contains invalid information. Please try again later."
+      },
+      "unknownError": {
+        "title": "Something Went Wrong",
+        "message": "An unexpected error occurred. Please refresh the page or try again shortly."
+      },
+      "networkError": {
+        "title": "No Internet Connection",
+        "message": "Please check your internet connection and try again."
+      }
+    }
+  },
+  "VerifierTrustPage": {
+      "modal": {
+        "title": "Verifier Name",
+        "description": "Make sure you recognize or trust this verifier. \nOnce you trust this verifier:",
+        "benefitSaveSecurely": "Your wallet will remember this verifier as trusted.",
+        "benefitAddToTrustedList": "This verifier will be added to your trusted list.",
+        "benefitSkipReviewFuture": "Future verification requests from this verifier will be automatically trusted.",
+        "trustButton": "Yes, I trust this Verifier",
+        "notTrustButton": "No, I don’t trust this Verifier",
+        "cancelButton": "Cancel",
+        "infoTooltipButton": "What does trusting mean?",
+        "infoTooltipText": "Trusting a verifier allows them to request your credentials. You’ll still choose which credentials to share in the next step."
+      },
+      "TrustRejectionModal": {
+        "title": "Are you sure you don’t want to trust this verifier?",
+        "description": "This request cannot proceed unless you trust this verifier. If you don’t, the request will stop and you will need to start a new request with your verifier.",
+        "confirmButton": "Don’t trust and cancel",
+        "goBackButton": "Go back"
+      },
+      "UserAuthorizationPage": {
+        "validateVerifierError": "Failed to validate verifier request. Please try again.",
+        "invalidVerifierResponse": "Invalid verifier response received.",
+        "addTrustedVerifierError": "Failed to add verifier to trusted list."
+      },
+      "ErrorCard": {
+        "defaultTitle": "Something went wrong",
+        "defaultDescription": "We couldn’t complete your request. Please close and try again later.",
+        "technicalTitle": "Oops! An Error Occurred.",
+        "technicalDescription": "There was a technical issue while processing your request. You can try again in a moment.",
+        "closeButton": "Close"
+      },
+      "RetryCard": {
+        "defaultTitle": "Something went wrong",
+        "defaultDescription": "We couldn’t complete your request. Please try again.",
+        "retryButton": "Retry"
+      },
+      "loadingCard": {
+      "title": "Fetching verifier info...",
+      "subtitle": "Please wait while we verify the request and prepare your credentials."
+    }
+  },
+  "CredentialRequestModal": {
+    "loading": {
+      "title": "Loading Credentials",
+      "message": "Please wait while we fetch your available credentials..."
+    },
+    "header": {
+      "title": "{{verifierName}} is requesting these credentials",
+      "description": "Select which credentials you want to share"
+    },
+    "error": {
+      "title": "Error loading credentials",
+      "walletIdMessage": "Please make sure you are logged in and have unlocked your wallet."
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "consentShare": "I Consent & Share"
+    }
+  },
+  "NoMatchingCredentialsModal": {
+    "title": "No matching credentials found",
+    "description": "Please download the corresponding credentials and retry the sharing process",
+    "goToHomeButton": "Go Back"
+  },
+  "LogoutConfirmation": {
+    "title": "Are you sure you want to exit?",
+    "message": "If you go back now, you will be logged out and must log in again to continue.",
+    "logoutButton": "Yes, Log Out",
+    "stayButton": "Stay On This Page"
+  }
+}
