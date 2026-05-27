@@ -60,19 +60,19 @@ flowchart TB
 
 ```mermaid
 flowchart TB
-    subgraph SPI["certify-integration-api · SPI module"]
+    subgraph SPI["certify-integration-api - SPI module"]
         DPI{{"interface DataProviderPlugin"}}
         VPI{{"interface VCIssuancePlugin"}}
-        EX[("Exceptions:<br/>DataProviderExchangeException,<br/>VCIExchangeException")]
+        EX[("Exceptions<br/>DataProviderExchangeException<br/>VCIExchangeException")]
     end
 
-    subgraph Core["certify-service · runtime"]
-        CIS["CertifyIssuanceServiceImpl<br/>#64;ConditionalOnProperty DataProvider"]
-        VIS["VCIssuanceServiceImpl<br/>#64;ConditionalOnProperty VCIssuance"]
-        PC["PluginConfig<br/>#64;Bean wiring"]
+    subgraph Core["certify-service - runtime"]
+        CIS["CertifyIssuanceServiceImpl<br/>ConditionalOnProperty DataProvider"]
+        VIS["VCIssuanceServiceImpl<br/>ConditionalOnProperty VCIssuance"]
+        PC["PluginConfig<br/>Bean wiring"]
     end
 
-    subgraph Plugins["Plugin JARs (loaded via loader.path)"]
+    subgraph Plugins["Plugin JARs loaded via loader.path"]
         Csv["MockCSVDataProviderPlugin"]
         Pg["PostgresDataProviderPlugin"]
         Mock["MockIdentityDataProvider"]
@@ -92,7 +92,7 @@ flowchart TB
 
     CIS --> DPI
     VIS --> VPI
-    PC -- "#64;ComponentScan" --> Plugins
+    PC -- ComponentScan --> Plugins
 
     classDef spiNode fill:#16A34A,stroke:#14532D,stroke-width:2px,color:#FFFFFF
     classDef coreNode fill:#DC2626,stroke:#7F1D1D,stroke-width:2px,color:#FFFFFF

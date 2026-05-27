@@ -333,7 +333,7 @@ mindmap
       Always set kid
       Rotate yearly
       HSM + canary
-      Pinned @context
+      Pinned JSON-LD context
     Operations
       One Redis per cluster
       Postgres PITR

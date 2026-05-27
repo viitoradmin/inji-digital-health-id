@@ -116,7 +116,7 @@ Drop the React SDK into your existing relying-party UI; deploy the Verify servic
 flowchart LR
     subgraph Yours[Your Existing Web App]
         UI[React UI<br/>your code]
-        UI -- imports --> SDK["@mosip/react-inji-verify-sdk"]
+        UI -- imports --> SDK["mosip/react-inji-verify-sdk"]
     end
     SDK -- "REST" --> IV[inji-verify-service]
     Wallet[Holder Wallet<br/>any OpenID4VP-compliant] -- vp_token --> IV
@@ -296,7 +296,7 @@ flowchart TB
     Q3 -- "Yes" --> Q4{Web UI or mobile?}
     Q3 -- "No" --> A0[You're in the wrong stack]
 
-    Q4 -- "Web" --> A3["Embed @mosip/react-inji-verify-sdk + run inji-verify-service"]
+    Q4 -- "Web" --> A3["Embed mosip/react-inji-verify-sdk<br/>and run inji-verify-service"]
     Q4 -- "Mobile" --> A4["Embed inji-openid4vp libs<br/>(Kotlin/Swift)"]
 
     classDef decision fill:#D97706,stroke:#78350F,stroke-width:2px,color:#FFFFFF

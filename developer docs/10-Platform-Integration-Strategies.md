@@ -92,7 +92,7 @@ flowchart LR
     subgraph Verify["Inji Verify"]
         IV[inji-verify-service<br/>self-hosted or hosted]
     end
-    FE -- "@mosip/react-inji-verify-sdk" --> SDK[Verify SDK Component]
+    FE -- "mosip/react-inji-verify-sdk" --> SDK["Verify SDK Component"]
     SDK -- "/vp-request, /vp-result" --> IV
     BE -. "audit log/PII<br/>(optional)" .-> IV
 
