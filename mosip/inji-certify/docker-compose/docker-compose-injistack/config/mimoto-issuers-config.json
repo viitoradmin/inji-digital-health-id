@@ -1,0 +1,58 @@
+{
+  "issuers": [
+    {
+      "credential_issuer": "University",
+      "issuer_id": "University",
+      "protocol": "OpenId4VCI",
+      "display": [
+        {
+          "name": "University Registrar",
+          "logo": {
+            "url": "https://mosip.github.io/inji-config/logos/agro-vertias-logo.png",
+            "alt_text": "university-logo"
+          },
+          "title": "University Registrar",
+          "description": "Download your Student Identity Credential",
+          "language": "en"
+        }
+      ],
+      "client_id": "wallet-demo",
+      "redirect_uri": "io.mosip.residentapp.inji://oauthredirect",
+      "token_endpoint": "http://localhost:8099/v1/mimoto/get-token/University",
+      "authorization_audience": "https://esignet-mock.collab.mosip.net/v1/esignet/oauth/v2/token",
+      "proxy_token_endpoint": "https://esignet-mock.collab.mosip.net/v1/esignet/oauth/v2/token",
+      "client_alias": "wallet-demo-client",
+      "qr_code_type": "EmbeddedVC",
+      "credential_issuer_host": "http://certify-nginx",
+      "enabled": "true",
+      "wellknown_endpoint": "http://certify-nginx/.well-known/openid-credential-issuer"
+    },
+    {
+      "credential_issuer": "HealthAuthority",
+      "issuer_id": "HealthAuthority",
+      "protocol": "OpenId4VCI",
+      "display": [
+        {
+          "name": "Health Authority",
+          "logo": {
+            "url": "https://api.collab.mosip.net/inji/mosip-logo.png",
+            "alt_text": "health-logo"
+          },
+          "title": "Health Authority",
+          "description": "Download your Health Insurance Card",
+          "language": "en"
+        }
+      ],
+      "client_id": "wallet-demo",
+      "redirect_uri": "io.mosip.residentapp.inji://oauthredirect",
+      "token_endpoint": "http://localhost:8099/v1/mimoto/get-token/HealthAuthority",
+      "authorization_audience": "https://esignet-mock.collab.mosip.net/v1/esignet/oauth/v2/token",
+      "proxy_token_endpoint": "https://esignet-mock.collab.mosip.net/v1/esignet/oauth/v2/token",
+      "client_alias": "wallet-demo-client",
+      "qr_code_type": "EmbeddedVC",
+      "credential_issuer_host": "http://certify-nginx",
+      "enabled": "true",
+      "wellknown_endpoint": "http://certify-nginx/.well-known/openid-credential-issuer"
+    }
+  ]
+}

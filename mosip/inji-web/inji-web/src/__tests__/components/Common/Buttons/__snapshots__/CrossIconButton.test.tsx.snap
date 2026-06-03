@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CrossIconButton Component matches snapshot with custom props 1`] = `
+<DocumentFragment>
+  <button
+    class="custom-btn-class"
+    data-testid="custom-btn-test-id"
+    type="button"
+  >
+    <svg
+      class="custom-icon-class"
+      data-testid="custom-icon-test-id"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M6.2 6.2a1 1 0 011.4 0L12 10.6l4.4-4.4a1 1 0 111.4 1.4L13.4 12l4.4 4.4a1 1 0 01-1.4 1.4L12 13.4l-4.4 4.4a1 1 0 11-1.4-1.4L10.6 12 6.2 7.6a1 1 0 010-1.4z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`CrossIconButton Component matches snapshot with default props 1`] = `
+<DocumentFragment>
+  <button
+    class=""
+    data-testid="btn-close-icon-container"
+    type="button"
+  >
+    <svg
+      class=""
+      data-testid="icon-close"
+      fill="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        d="M6.2 6.2a1 1 0 011.4 0L12 10.6l4.4-4.4a1 1 0 111.4 1.4L13.4 12l4.4 4.4a1 1 0 01-1.4 1.4L12 13.4l-4.4 4.4a1 1 0 11-1.4-1.4L10.6 12 6.2 7.6a1 1 0 010-1.4z"
+        fill-rule="evenodd"
+      />
+    </svg>
+  </button>
+</DocumentFragment>
+`;

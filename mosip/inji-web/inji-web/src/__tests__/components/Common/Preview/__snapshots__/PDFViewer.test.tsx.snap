@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PDFViewer Component renders correctly and matches snapshot 1`] = `
+<div>
+  <div
+    class="w-full max-h-screen relative flex flex-col items-center"
+  >
+    <div
+      data-file="\\"blob:http://localhost:3000/mock-pdf-url\\""
+      data-testid="pdf-viewer"
+    >
+      <div
+        data-testid="spinning-loader"
+      >
+        Loading PDF...
+      </div>
+      <div
+        class="mb-2 border border-gray-200"
+      >
+        <div
+          data-page-number="1"
+          data-render-annotation-layer="false"
+          data-render-text-layer="false"
+          data-testid="pdf-page"
+          data-width="0"
+        >
+          Page 
+          1
+        </div>
+      </div>
+      <div
+        class="mb-2 border border-gray-200"
+      >
+        <div
+          data-page-number="2"
+          data-render-annotation-layer="false"
+          data-render-text-layer="false"
+          data-testid="pdf-page"
+          data-width="0"
+        >
+          Page 
+          2
+        </div>
+      </div>
+      <div
+        class="mb-2 border border-gray-200"
+      >
+        <div
+          data-page-number="3"
+          data-render-annotation-layer="false"
+          data-render-text-layer="false"
+          data-testid="pdf-page"
+          data-width="0"
+        >
+          Page 
+          3
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

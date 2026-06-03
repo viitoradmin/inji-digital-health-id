@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "InsuranceCredential": {
+      "@id": "__BASE_URL__/contexts/insurance.json#InsuranceCredential",
+      "@context": {
+        "@version": 1.1,
+        "@protected": true,
+        "fullName": "__BASE_URL__/contexts/insurance.json#fullName",
+        "policyNumber": "__BASE_URL__/contexts/insurance.json#policyNumber",
+        "plan": "__BASE_URL__/contexts/insurance.json#plan",
+        "coverageValidUntil": "__BASE_URL__/contexts/insurance.json#coverageValidUntil"
+      }
+    }
+  }
+}

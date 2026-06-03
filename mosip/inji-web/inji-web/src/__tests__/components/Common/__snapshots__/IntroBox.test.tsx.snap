@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the Layout of IntroBox Check if the layout is matching with the snapshots 1`] = `
+<DocumentFragment>
+  <div
+    class="text-center pb-10"
+    data-testid="IntroBox-Container"
+  >
+    <h2
+      class="text-[30px] leading-[38px] tracking-[-0.02em] sm:text-[36px] sm:leading-[44px] font-bold text-iw-title"
+      data-testid="IntroBox-Text"
+    >
+      Intro.title 
+      <span
+        class="italic"
+      >
+        <span
+          class="inline-block bg-gradient-to-r from-iw-primary to-iw-secondary bg-clip-text text-md font-bold text-transparent"
+        >
+          Intro.title2
+        </span>
+      </span>
+    </h2>
+    <p
+      class="mt-2 text-[18px] leading-[28px] font-semibold text-iw-subTitle"
+      data-testid="IntroBox-SubText"
+    >
+      Intro.subTitle
+    </p>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,19 @@
+apiVersion: v2
+name: injiweb
+description: A Helm chart for INJI injiweb UI module
+type: application
+version: 0.17.0
+appVersion: ""
+dependencies:
+  - name: common
+    repository: https://charts.bitnami.com/bitnami
+    tags:
+      - bitnami-common
+    version: 1.x.x
+home: https://inji.io
+keywords:
+  - mosip
+  - inji-web
+maintainers:
+  - email: info@inji.io
+    name: INJI

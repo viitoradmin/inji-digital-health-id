@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageTitle Component should match snapshot 1`] = `
+<DocumentFragment>
+  <span
+    class="text-[24px] leading-[32px] font-bold"
+    data-testid="title-test-page"
+  >
+    Test Page Title
+  </span>
+</DocumentFragment>
+`;
