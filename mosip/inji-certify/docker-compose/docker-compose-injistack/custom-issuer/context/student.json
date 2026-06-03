@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@protected": true,
+    "StudentIdentityCredential": {
+      "@id": "__BASE_URL__/contexts/student.json#StudentIdentityCredential",
+      "@context": {
+        "@version": 1.1,
+        "@protected": true,
+        "fullName": "__BASE_URL__/contexts/student.json#fullName",
+        "studentId": "__BASE_URL__/contexts/student.json#studentId",
+        "program": "__BASE_URL__/contexts/student.json#program",
+        "enrollmentYear": "__BASE_URL__/contexts/student.json#enrollmentYear",
+        "email": "__BASE_URL__/contexts/student.json#email"
+      }
+    }
+  }
+}

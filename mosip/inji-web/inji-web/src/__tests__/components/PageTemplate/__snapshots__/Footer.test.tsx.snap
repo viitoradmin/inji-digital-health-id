@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing the Layout of Footer Container Check if the layout is matching with the snapshots 1`] = `
+<DocumentFragment>
+  <footer
+    class="fixed bottom-0 left-0 right-0 py-4 transform rotate-180 shadow-sm shadow-iw-shadow bg-iw-footer"
+    data-testid="Footer-Container"
+  >
+    <div
+      class="w-full px-0 flex flex-col sm:flex-row justify-between items-end sm:items-center"
+    >
+      <p
+        class="ps-7 text-[#9E9E9E] transform rotate-180 text-[16px] leading-[24px] font-medium mr-4 ml-4"
+        data-testid="Footer-Text"
+      >
+        Footer.copyRight
+      </p>
+      <div
+        class="flex flex-row items-center me-4"
+      >
+        <p
+          class="transform rotate-180 text-[16px] leading-[24px] font-medium"
+          data-testid="Footer-Text"
+        >
+          Footer.product
+        </p>
+        <img
+          alt="a square mosip logo"
+          class="w-10 h-10 transform rotate-180 m-2"
+          src="https://api.collab.mosip.net/inji/mosip-logo.png"
+        />
+      </div>
+    </div>
+  </footer>
+</DocumentFragment>
+`;
