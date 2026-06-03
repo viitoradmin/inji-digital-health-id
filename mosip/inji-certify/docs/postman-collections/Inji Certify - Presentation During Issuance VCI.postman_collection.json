@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "1. Discovery Endpoints Copy",
+			"name": "1. Discovery Endpoints",
 			"item": [
 				{
 					"name": "1.1 OpenID Credential Issuer Metadata",
@@ -26,9 +26,10 @@
 									"    pm.expect(jsonData).to.have.property('authorization_servers');",
 									"    pm.expect(jsonData).to.have.property('credential_endpoint');",
 									"",
-									"    pm.collectionVariables.set('authorization_server', jsonData.authorization_servers[0]);",
-									"    var credEndpoint = jsonData.credential_endpoint;",
-									"    credEndpoint = credEndpoint.replace('http://certify-nginx:80', 'http://localhost:8091');",
+									"    var dockerHost = 'http://certify-nginx:80';",
+									"    var localHost = 'http://localhost:8091';",
+									"    pm.collectionVariables.set('authorization_server', jsonData.authorization_servers[0].replace(dockerHost, localHost));",
+									"    var credEndpoint = jsonData.credential_endpoint.replace(dockerHost, localHost);",
 									"    pm.collectionVariables.set('credential_endpoint', credEndpoint);",
 									"    pm.collectionVariables.set('credential_issuer', jsonData.credential_issuer);",
 									"    pm.environment.set('audUrl', jsonData.credential_issuer);",
@@ -76,8 +77,10 @@
 									"    pm.expect(jsonData).to.have.property('token_endpoint');",
 									"    pm.expect(jsonData).to.have.property('interactive_authorization_endpoint');",
 									"",
-									"    pm.collectionVariables.set('token_endpoint', jsonData.token_endpoint);",
-									"    pm.collectionVariables.set('iar_endpoint', jsonData.interactive_authorization_endpoint);",
+									"    var dockerHost = 'http://certify-nginx:80';",
+									"    var localHost = 'http://localhost:8091';",
+									"    pm.collectionVariables.set('token_endpoint', jsonData.token_endpoint.replace(dockerHost, localHost));",
+									"    pm.collectionVariables.set('iar_endpoint', jsonData.interactive_authorization_endpoint.replace(dockerHost, localHost));",
 									"});"
 								],
 								"type": "text/javascript"
@@ -93,13 +96,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{authorization_server}}/v1/certify/.well-known/oauth-authorization-server",
+							"raw": "{{certifyurl}}/.well-known/oauth-authorization-server",
 							"host": [
-								"{{authorization_server}}"
+								"{{certifyurl}}"
 							],
 							"path": [
-								"v1",
-								"certify",
 								".well-known",
 								"oauth-authorization-server"
 							]
@@ -370,7 +371,29 @@
 									"    \"iss\" : clientId,",
 									"}, header, exp=600, alg = \"RS256\")",
 									"",
-									"pm.collectionVariables.set(\"proof_jwt\",signed_jwt);"
+									"pm.collectionVariables.set(\"proof_jwt\",signed_jwt);",
+									"",
+									"// Build credential request body from issuer metadata (must match DB exactly)",
+									"const credentialBody = {",
+									"    format: \"ldp_vc\",",
+									"    credential_definition: {",
+									"        \"@context\": [",
+									"            \"https://viitoradmin.github.io/inji-digital-health-id/contexts/student.json\",",
+									"            \"https://www.w3.org/2018/credentials/v1\"",
+									"        ],",
+									"        type: [",
+									"            \"StudentIdentityCredential\",",
+									"            \"VerifiableCredential\"",
+									"        ]",
+									"    },",
+									"    proof: {",
+									"        proof_type: \"jwt\",",
+									"        jwt: signed_jwt",
+									"    }",
+									"};",
+									"pm.request.body.update(JSON.stringify(credentialBody, null, 4));",
+									"pm.request.headers.upsert({ key: 'Content-Type', value: 'application/json' });",
+									"console.log(\"Credential request body set for StudentIdentityCredential\");"
 								],
 								"type": "text/javascript"
 							}
@@ -397,10 +420,19 @@
 							]
 						},
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"format\": \"ldp_vc\",\n    \"credential_definition\": {\n        \"@context\": [\n            \"https://www.w3.org/2018/credentials/v1\",\n            \"https://viitoradmin.github.io/inji-digital-health-id/contexts/student.json\"\n        ],\n        \"type\": [\n            \"VerifiableCredential\",\n            \"StudentIdentityCredential\"\n        ]\n    },\n    \"proof\": {\n        \"proof_type\": \"jwt\",\n        \"jwt\": \"{{proof_jwt}}\"\n    }\n}",
+							"raw": "{\n    \"format\": \"ldp_vc\",\n    \"credential_definition\": {\n        \"@context\": [\n            \"https://viitoradmin.github.io/inji-digital-health-id/contexts/student.json\",\n            \"https://www.w3.org/2018/credentials/v1\"\n        ],\n        \"type\": [\n            \"StudentIdentityCredential\",\n            \"VerifiableCredential\"\n        ]\n    },\n    \"proof\": {\n        \"proof_type\": \"jwt\",\n        \"jwt\": \"{{proof_jwt}}\"\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -442,7 +474,7 @@
 	"variable": [
 		{
 			"key": "clientId",
-			"value": "mock-oidc-client"
+			"value": "sample-wallet"
 		},
 		{
 			"key": "redirectionUrl",
@@ -577,8 +609,12 @@
 			"value": ""
 		},
 		{
+			"key": "certifyurl",
+			"value": "http://localhost:8091/v1/certify"
+		},
+		{
 			"key": "authorization_server",
-			"value": ""
+			"value": "http://localhost:8091"
 		},
 		{
 			"key": "token_endpoint",
@@ -594,7 +630,7 @@
 		},
 		{
 			"key": "credential_endpoint",
-			"value": ""
+			"value": "http://localhost:8091/v1/certify/issuance/credential"
 		},
 		{
 			"key": "credential_issuer",

@@ -322,7 +322,8 @@ CREATE TABLE certify.university_student_data (
 
 INSERT INTO certify.university_student_data (uin, fullname, studentid, program, enrollmentyear, email) VALUES
     ('5860356276', 'Jane Thompson', 'STU-2026-001', 'B.Tech Computer Science', '2026', 'jane.thompson@university.edu'),
-    ('2154189532', 'Gorge Cooper',  'STU-2026-002', 'B.Sc Physics',            '2026', 'gorge.cooper@university.edu');
+    ('2154189532', 'Gorge Cooper',  'STU-2026-002', 'B.Sc Physics',            '2026', 'gorge.cooper@university.edu'),
+    ('2042351307', 'TEST FULLNAME', 'STU-MOCK-001', 'Computer Science',        '2026', 'Mimoto_AddIdentity_withValidParameters_smoke_Pos@mosip.net');
 
 -- Issuer 2: Health Authority -> InsuranceCredential
 CREATE TABLE certify.health_insurance_data (
